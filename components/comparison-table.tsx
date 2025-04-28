@@ -225,7 +225,7 @@ export function ComparisonTable() {
           {t.comparison.features.map((feature, index) => (
             <div
               key={index}
-              className={`grid grid-cols-4 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"} rounded-xl mb-2 py-6 px-8`}
+              className={`grid grid-cols-4 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"} rounded-xl mb-2 py-6 pl-8`}
             >
               <div className="col-span-1 flex items-center gap-4">
                 <div className="flex-shrink-0">

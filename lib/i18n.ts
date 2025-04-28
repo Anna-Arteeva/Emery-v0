@@ -15,7 +15,7 @@ export const translations = {
       intro:
         "Structured courses, real-world practice, and human guidance – for learners who've tried apps, but want real progress.",
       cta: "Get Started",
-      caption: "The first month is on us",
+      caption: "Your first lesson is on us",
       mentorBubble: "Get help whenever you need it!",
     },
     whyItWorks: {
@@ -185,6 +185,10 @@ export const translations = {
       headline: "Are you ready to take your English to the next level?",
       cta: "Get Started",
     },
+    videoLessons: {
+      title: "UNIQUE EDUCATIONAL VIDEOS",
+      description: "Learn to understand all English accents and speak like your favorite characters",
+    },
   },
   de: {
     nav: {
@@ -202,7 +206,7 @@ export const translations = {
       intro:
         "Strukturierte Kurse, Übungen aus der realen Welt und menschliche Anleitung – für Lernende, die Apps ausprobiert haben, aber echte Fortschritte erzielen möchten.",
       cta: "Jetzt starten",
-      caption: "Der erste Monat geht auf uns",
+      caption: "Die erste Lektion geht auf uns",
       mentorBubble: "Erhalte Hilfe, wann immer du sie brauchst!",
     },
     whyItWorks: {
@@ -374,6 +378,10 @@ export const translations = {
       headline: "Bist du bereit, dein Englisch auf die nächste Stufe zu bringen?",
       cta: "Jetzt starten",
     },
+    videoLessons: {
+      title: "EINZIGARTIGE LEHRVIDEOS",
+      description: "Lerne alle englischen Akzente zu verstehen und zu sprechen wie deine Lieblingsfiguren",
+    },
   },
   ru: {
     nav: {
@@ -391,7 +399,7 @@ export const translations = {
       intro:
         "Структурированные курсы, практика из реальной жизни и человеческое руководство – для тех, кто пробовал приложения, но хочет реального прогресса.",
       cta: "Начать",
-      caption: "Первый месяц за наш счет",
+      caption: "Первый урок за наш счет",
       mentorBubble: "Получите помощь, когда она вам нужна!",
     },
     whyItWorks: {
@@ -564,6 +572,10 @@ export const translations = {
       headline: "Готовы поднять свой английский на новый уровень?",
       cta: "Начать",
     },
+    videoLessons: {
+      title: "УНИКАЛЬНЫЕ ОБУЧАЮЩИЕ ВИДЕО",
+      description: "Научитесь понимать все английские акценты и говорить как ваши любимые персонажи",
+    },
   },
   fr: {
     nav: {
@@ -581,7 +593,7 @@ export const translations = {
       intro:
         "Des cours structurés, une pratique réelle et un accompagnement humain – pour les apprenants qui ont essayé des applications, mais qui veulent de vrais progrès.",
       cta: "Commencer",
-      caption: "Le premier mois est offert",
+      caption: "La première leçon est offerte",
       mentorBubble: "Obtenez de l'aide quand vous en avez besoin !",
     },
     whyItWorks: {
@@ -754,6 +766,10 @@ export const translations = {
     callToAction: {
       headline: "Êtes-vous prêt à faire passer votre anglais au niveau supérieur ?",
       cta: "Commencer",
+    },
+    videoLessons: {
+      title: "VIDÉOS ÉDUCATIVES UNIQUES",
+      description: "Apprenez à comprendre tous les accents anglais et à parler comme vos personnages préférés",
     },
   },
 }
