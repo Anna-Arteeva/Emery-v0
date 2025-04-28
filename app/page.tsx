@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { WhyItWorks } from "@/components/why-it-works"
-import { FeatureSections } from "@/components/feature-sections"
+import { FeatureSectionsStacked } from "@/components/feature-sections-stacked"
 import { OurMentors } from "@/components/our-mentors"
 import { ComparisonTable } from "@/components/comparison-table"
 import { TestimonialsCarousel } from "@/components/testimonials-carousel"
@@ -16,7 +16,7 @@ export default function Home() {
       <div className="flex-grow">
         <Hero />
         <WhyItWorks />
-        <FeatureSections />
+        <FeatureSectionsStacked />
         <OurMentors />
         <ComparisonTable />
         <TestimonialsCarousel />

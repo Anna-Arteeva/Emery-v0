@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import { useLanguage } from "./language-provider"
 import { translations } from "@/lib/i18n"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import Image from "next/image"
 
-// Sample testimonial data
+// Sample testimonial data with added photo information
 const testimonials = [
   {
     id: 1,
@@ -13,6 +14,7 @@ const testimonials = [
     rating: 5,
     text: "This app has completely transformed my English learning journey. The human mentor support makes all the difference!",
     source: "App Store",
+    photo: "/testimonials/sarah.jpg",
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ const testimonials = [
     rating: 5,
     text: "I've tried many language apps before, but Emery is the first one that actually helped me improve my speaking confidence.",
     source: "Google Play",
+    photo: "/testimonials/michael.png",
   },
   {
     id: 3,
@@ -27,6 +30,7 @@ const testimonials = [
     rating: 5,
     text: "The combination of structured lessons and human feedback is perfect. I feel like I'm making real progress every day.",
     source: "App Store",
+    photo: "/testimonials/akiko.png",
   },
   {
     id: 4,
@@ -34,6 +38,7 @@ const testimonials = [
     rating: 4,
     text: "Great app for intermediate learners. The mentor sessions helped me overcome my plateau and start advancing again.",
     source: "Google Play",
+    photo: "/testimonials/carlos.png",
   },
   {
     id: 5,
@@ -41,6 +46,7 @@ const testimonials = [
     rating: 5,
     text: "The personalized feedback on my pronunciation has been invaluable. I feel much more confident in conversations now.",
     source: "App Store",
+    photo: "/testimonials/emma.jpg",
   },
   {
     id: 6,
@@ -48,6 +54,7 @@ const testimonials = [
     rating: 5,
     text: "Finally an app that understands that language learning isn't just about vocabulary, but about real communication.",
     source: "Google Play",
+    photo: "/testimonials/jurgen.png",
   },
 ]
 
@@ -128,9 +135,20 @@ export function TestimonialsCarousel() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 line-clamp-4">{testimonial.text}</p>
-                <div className="mt-auto">
-                  <p className="font-medium text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.source}</p>
+                <div className="mt-auto flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-100">
+                    <Image
+                      src={testimonial.photo || "/placeholder.svg?height=40&width=40&query=person"}
+                      alt={testimonial.name}
+                      width={40}
+                      height={40}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.source}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -145,13 +163,6 @@ export function TestimonialsCarousel() {
           >
             <ChevronRight className="w-5 h-5 text-gray-600" />
           </button>
-        </div>
-
-        {/* Dots indicator */}
-        <div className="flex justify-center gap-2 mt-8">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className={`w-2 h-2 rounded-full ${i === 0 ? "bg-gray-800" : "bg-gray-300"}`}></div>
-          ))}
         </div>
       </div>
     </section>

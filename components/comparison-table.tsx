@@ -194,15 +194,15 @@ export function ComparisonTable() {
         {/* Desktop comparison table - hidden on small screens */}
         <div className="hidden md:block max-w-5xl mx-auto">
           {/* Table headers with logos */}
-          <div className="flex justify-center gap-8 mb-8">
-            <div className="w-1/4"></div>
-            <div className="w-1/4 flex justify-center">
+          <div className="grid grid-cols-4 mb-8">
+            <div className="col-span-1"></div>
+            <div className="col-span-1 flex justify-center">
               <div className="w-20 h-20 flex items-center justify-center">
                 <Image src="/emery-logo.svg" alt="Emery" width={50} height={50} className="h-12 w-auto" />
               </div>
             </div>
-            <div className="w-1/4 flex justify-center">
-              <div className="w-20 h-20 flex items-center justify-center">
+            <div className="col-span-1 flex justify-center text-center">
+              <div className="w-20 h-20 flex flex-col items-center justify-center">
                 <span className="text-gray-800 font-bold text-lg">
                   English
                   <br />
@@ -210,8 +210,8 @@ export function ComparisonTable() {
                 </span>
               </div>
             </div>
-            <div className="w-1/4 flex justify-center">
-              <div className="w-20 h-20 flex items-center justify-center">
+            <div className="col-span-1 flex justify-center text-center">
+              <div className="w-20 h-20 flex flex-col items-center justify-center">
                 <span className="text-gray-800 font-bold text-lg">
                   Other
                   <br />
@@ -225,16 +225,16 @@ export function ComparisonTable() {
           {t.comparison.features.map((feature, index) => (
             <div
               key={index}
-              className={`flex items-center ${index % 2 === 0 ? "bg-gray-50" : "bg-white"} rounded-xl mb-2 py-6 px-8`}
+              className={`grid grid-cols-4 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"} rounded-xl mb-2 py-6 px-8`}
             >
-              <div className="w-1/4 flex items-center gap-4">
+              <div className="col-span-1 flex items-center gap-4">
                 <div className="flex-shrink-0">
                   {featureIcons[feature.name] || <Star className="w-6 h-6 text-gray-700" />}
                 </div>
                 <span className="font-medium text-gray-900">{feature.name}</span>
               </div>
 
-              <div className="w-1/4 flex justify-center">
+              <div className="col-span-1 flex justify-center">
                 {feature.name === "Price" ||
                 feature.name === "Preis" ||
                 feature.name === "Цена" ||
@@ -275,7 +275,7 @@ export function ComparisonTable() {
                 )}
               </div>
 
-              <div className="w-1/4 flex justify-center">
+              <div className="col-span-1 flex justify-center">
                 {feature.name === "Price" ||
                 feature.name === "Preis" ||
                 feature.name === "Цена" ||
@@ -318,7 +318,7 @@ export function ComparisonTable() {
                 )}
               </div>
 
-              <div className="w-1/4 flex justify-center">
+              <div className="col-span-1 flex justify-center">
                 {feature.name === "Price" ||
                 feature.name === "Preis" ||
                 feature.name === "Цена" ||

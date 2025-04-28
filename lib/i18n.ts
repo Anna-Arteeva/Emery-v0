@@ -30,33 +30,28 @@ export const translations = {
       testimonialSubheading: "Real feedback from people learning with Emery",
     },
     features: {
-      headline: "Learn Better. Practice Smarter. Stay Motivated.",
-      learnTitle: "Learn with joy",
-      learnPoints: [
-        "Structured course with clear progression path",
-        "Fun video lessons that keep you engaged",
-        "Interactive exercises to reinforce what you've learned",
-        "Clear grammar explanations that actually make sense",
-        "Immersive vocabulary tools to build your word power",
+      items: [
+        {
+          title: "Structured course",
+          description: "Balanced grammar, comprehension, speaking, vocabulary, like in a top language school",
+        },
+        {
+          title: "Video lessons",
+          description: "Learn with engaging and authentic content created by native speakers",
+        },
+        {
+          title: "Immersive vocabulary",
+          description: "Different topics, new vocabulary, grammar, and interactive excursuses",
+        },
+        {
+          title: "Human mentor",
+          description: "Get personal support while you progress through your learning journey",
+        },
+        {
+          title: "Real speaking practice",
+          description: "Build speaking confidence in a safe, non-judgmental space",
+        },
       ],
-      learnCta: "Explore lessons",
-      practiceTitle: "Practice Real-Life English Conversations",
-      practiceSubtitle: "Real accents, real conversations, real progress.",
-      practicePoints: [
-        "Improve speaking and pronunciation with native models",
-        "Build confidence in a safe, non-judgmental space",
-        "Train your listening with authentic content",
-        "Practice writing with guided exercises and feedback",
-      ],
-      practiceCta: "Try a conversation",
-      supportTitle: "Mentor support",
-      supportPoints: [
-        "Talk to a mentor when you're stuck or need motivation",
-        "Get personal feedback on your progress",
-        "Regular check-ins to help you stay on track and accountable",
-        "You're not alone – learn with a human by your side",
-      ],
-      supportCta: "Meet our mentors",
     },
     mentors: {
       title: "Meet Our Mentors",
@@ -222,33 +217,30 @@ export const translations = {
       testimonialSubheading: "Echtes Feedback von Menschen, die mit Emery lernen",
     },
     features: {
-      headline: "Besser lernen. Intelligenter üben. Motiviert bleiben.",
-      learnTitle: "Mit Freude lernen",
-      learnPoints: [
-        "Strukturierter Kurs mit klarem Fortschrittspfad",
-        "Unterhaltsame Videolektionen, die dich fesseln",
-        "Interaktive Übungen zur Festigung des Gelernten",
-        "Klare Grammatikerklärungen, die wirklich Sinn ergeben",
-        "Immersive Vokabelwerkzeuge zum Aufbau deines Wortschatzes",
+      headline: "Wie Emery dir beim Lernen hilft",
+      subheading: "Unser umfassender Ansatz kombiniert die besten Lernmethoden mit menschlicher Unterstützung",
+      items: [
+        {
+          title: "Strukturierter Kurs",
+          description: "Ausgewogene Grammatik, Verständnis, Sprechen und Vokabeln, wie in einer Top-Sprachschule",
+        },
+        {
+          title: "Videolektionen",
+          description: "Lerne mit ansprechendem und authentischem Inhalt von Muttersprachlern",
+        },
+        {
+          title: "Immersiver Wortschatz",
+          description: "Verschiedene Themen, neuer Wortschatz, Grammatik und interaktive Exkurse",
+        },
+        {
+          title: "Menschlicher Mentor",
+          description: "Erhalte persönliche Unterstützung während deines Lernfortschritts",
+        },
+        {
+          title: "Echte Sprechpraxis",
+          description: "Baue Selbstvertrauen beim Sprechen in einem sicheren, urteilsfreien Raum auf",
+        },
       ],
-      learnCta: "Lektionen erkunden",
-      practiceTitle: "Übe Englische Gespräche aus dem echten Leben",
-      practiceSubtitle: "Echte Akzente, echte Gespräche, echter Fortschritt.",
-      practicePoints: [
-        "Verbessere dein Sprechen und deine Aussprache mit muttersprachlichen Vorbildern",
-        "Baue Selbstvertrauen in einer sicheren, urteilsfreien Umgebung auf",
-        "Trainiere dein Hörverständnis mit authentischen Inhalten",
-        "Übe das Schreiben mit geführten Übungen und Feedback",
-      ],
-      practiceCta: "Probiere ein Gespräch",
-      supportTitle: "Mentor-Unterstützung",
-      supportPoints: [
-        "Sprich mit einem Mentor, wenn du nicht weiterkommst oder Motivation brauchst",
-        "Erhalte persönliches Feedback zu deinen Fortschritten",
-        "Regelmäßige Check-ins helfen dir, auf Kurs zu bleiben und Verantwortung zu übernehmen",
-        "Du bist nicht allein – lerne mit einem Menschen an deiner Seite",
-      ],
-      supportCta: "Lerne unsere Mentoren kennen",
     },
     mentors: {
       title: "Unsere Mentoren",
@@ -414,33 +406,31 @@ export const translations = {
       testimonialSubheading: "Реальные отзывы от людей, изучающих язык с Emery",
     },
     features: {
-      headline: "Учитесь лучше. Практикуйтесь умнее. Оставайтесь мотивированными.",
-      learnTitle: "Учитесь с радостью",
-      learnPoints: [
-        "Структурированный курс с четким путем прогресса",
-        "Увлекательные видеоуроки, которые удерживают ваше внимание",
-        "Интерактивные упражнения для закрепления изученного",
-        "Понятные объяснения грамматики, которые действительно имеют смысл",
-        "Иммерсивные инструменты для расширения словарного запаса",
+      headline: "Как Emery помогает вам учиться",
+      subheading: "Наш комплексный подход сочетает лучшие методы обучения с человеческой поддержкой",
+      items: [
+        {
+          title: "Структурированный курс",
+          description:
+            "Сбалансированная грамматика, понимание, разговорная речь и словарный запас, как в лучшей языковой школе",
+        },
+        {
+          title: "Видеоуроки",
+          description: "Учитесь с увлекательным и аутентичным контентом от носителей языка",
+        },
+        {
+          title: "Иммерсивный словарный запас",
+          description: "Различные темы, новый словарный запас, грамматика и интерактивные экскурсы",
+        },
+        {
+          title: "Человек-наставник",
+          description: "Получайте личную поддержку во время вашего прогресса в обучении",
+        },
+        {
+          title: "Реальная разговорная практика",
+          description: "Развивайте уверенность в разговоре в безопасном, неосуждающем пространстве",
+        },
       ],
-      learnCta: "Изучить уроки",
-      practiceTitle: "Практикуйте реальные разговоры на английском",
-      practiceSubtitle: "Реальные акценты, реальные разговоры, реальный прогресс.",
-      practicePoints: [
-        "Улучшайте речь и произношение с помощью носителей языка",
-        "Развивайте уверенность в безопасном, неосуждающем пространстве",
-        "Тренируйте аудирование с аутентичным контентом",
-        "Практикуйте письмо с руководством и обратной связью",
-      ],
-      practiceCta: "Попробовать разговор",
-      supportTitle: "Поддержка наставника",
-      supportPoints: [
-        "Поговорите с наставником, когда вы застряли или нуждаетесь в мотивации",
-        "Получите персональную обратную связь о вашем прогрессе",
-        "Регулярные проверки помогут вам оставаться на правильном пути",
-        "Вы не одни – учитесь с человеком рядом с вами",
-      ],
-      supportCta: "Познакомьтесь с нашими наставниками",
     },
     mentors: {
       title: "Познакомьтесь с нашими наставниками",
@@ -606,33 +596,31 @@ export const translations = {
       testimonialSubheading: "Des retours authentiques de personnes apprenant avec Emery",
     },
     features: {
-      headline: "Apprenez mieux. Pratiquez plus intelligemment. Restez motivé.",
-      learnTitle: "Apprenez avec joie",
-      learnPoints: [
-        "Cours structuré avec un chemin de progression clair",
-        "Leçons vidéo amusantes qui maintiennent votre engagement",
-        "Exercices interactifs pour renforcer ce que vous avez appris",
-        "Explications grammaticales claires qui ont vraiment du sens",
-        "Outils de vocabulaire immersifs pour développer votre lexique",
+      headline: "Comment Emery vous aide à apprendre",
+      subheading: "Notre approche complète combine les meilleures méthodes d'apprentissage avec un soutien humain",
+      items: [
+        {
+          title: "Cours structuré",
+          description:
+            "Grammaire équilibrée, compréhension, expression orale et vocabulaire, comme dans une école de langues de premier plan",
+        },
+        {
+          title: "Leçons vidéo",
+          description: "Apprenez avec du contenu engageant et authentique créé par des locuteurs natifs",
+        },
+        {
+          title: "Vocabulaire immersif",
+          description: "Différents sujets, nouveau vocabulaire, grammaire et excursus interactifs",
+        },
+        {
+          title: "Mentor humain",
+          description: "Obtenez un soutien personnel pendant votre progression d'apprentissage",
+        },
+        {
+          title: "Pratique réelle de la parole",
+          description: "Développez votre confiance en expression orale dans un espace sûr et sans jugement",
+        },
       ],
-      learnCta: "Explorer les leçons",
-      practiceTitle: "Pratiquez des conversations anglaises réelles",
-      practiceSubtitle: "Accents réels, conversations réelles, progrès réels.",
-      practicePoints: [
-        "Améliorez votre expression orale et votre prononciation avec des modèles natifs",
-        "Développez votre confiance dans un espace sûr et sans jugement",
-        "Entraînez votre écoute avec du contenu authentique",
-        "Pratiquez l'écriture avec des exercices guidés et des retours",
-      ],
-      practiceCta: "Essayer une conversation",
-      supportTitle: "Soutien de mentor",
-      supportPoints: [
-        "Parlez à un mentor quand vous êtes bloqué ou avez besoin de motivation",
-        "Obtenez des retours personnels sur vos progrès",
-        "Des suivis réguliers pour vous aider à rester sur la bonne voie",
-        "Vous n'êtes pas seul – apprenez avec un humain à vos côtés",
-      ],
-      supportCta: "Rencontrez nos mentors",
     },
     mentors: {
       title: "Rencontrez nos mentors",
