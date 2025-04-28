@@ -36,29 +36,35 @@ export function FeatureSectionsStacked() {
     {
       title: "Real speaking practice",
       description: "Build speaking confidence in a safe, non-judgmental space",
-      image: "/features/speaking-practice.png",
+      image: "/features/speaking-practice-new.png",
       imagePosition: "right",
     },
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container-custom">
+    <section className="py-8 bg-white">
+      <div className="container mx-auto px-4 max-w-[900px]">
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`flex flex-col ${index !== features.length - 1 ? "mb-32" : ""} md:mb-40 md:flex-row md:items-center md:gap-12 lg:gap-20 ${
+            className={`flex flex-col ${index !== features.length - 1 ? "mb-20" : ""} md:mb-24 md:flex-row md:items-center md:gap-6 lg:gap-8 ${
               feature.imagePosition === "left" ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden">
-                <Image src={feature.image || "/placeholder.svg"} alt={feature.title} fill className="object-cover" />
+            <div className="md:w-2/5 mb-6 md:mb-0 flex justify-center">
+              <div className="relative w-full max-w-sm h-auto">
+                <Image
+                  src={feature.image || "/placeholder.svg"}
+                  alt={feature.title}
+                  width={350}
+                  height={260}
+                  className="w-full h-auto object-contain rounded-lg"
+                />
               </div>
             </div>
-            <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{feature.title}</h2>
-              <p className="text-lg md:text-xl text-gray-600">{feature.description}</p>
+            <div className="md:w-3/5">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">{feature.title}</h2>
+              <p className="text-base md:text-lg text-gray-600">{feature.description}</p>
             </div>
           </div>
         ))}

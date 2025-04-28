@@ -20,11 +20,11 @@ export const translations = {
     },
     whyItWorks: {
       subtitle: "Why It Works",
-      headline: "Human + Tech",
+      headline: "Stractured Course + Human Mentor",
       mainText:
         "Apps alone often don't work. That's why Emery combines structured content accessible anytime with the motivation, clarity and feedback only human mentors can provide.",
       testimonial:
-        "I've tried apps before, but this is the first time I feel like I'm really learning The personalized feedback makes all the difference",
+        "I've tried apps before, but this is the first time I feel like I'm really learning. Human guidance makes all the difference",
       testimonialLocation: "Intermediate English Learner",
       testimonialHeading: "What Our Students Say",
       testimonialSubheading: "Real feedback from people learning with Emery",
