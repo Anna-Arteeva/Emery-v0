@@ -30,17 +30,17 @@ export function FeatureCards() {
   }
 
   // Safely access features with fallbacks
-  const features = (t.features?.items || []).map((item, index) => ({
-    icon: featureIcons[index % featureIcons.length], // Use modulo to prevent out-of-bounds
-    title: item?.title || `Feature ${index + 1}`,
-    description: item?.description || "Description not available in this language",
-    image: `/features/${getFeatureImageName(index)}.png`,
-  }))
+  const features = t.features?.items || []
 
   // If no features are available, use fallback data
   const fallbackFeatures =
     features.length > 0
-      ? features
+      ? features.map((item, index) => ({
+          icon: featureIcons[index % featureIcons.length],
+          title: item.title,
+          description: item.description,
+          image: `/features/${getFeatureImageName(index)}.png`,
+        }))
       : [
           {
             icon: featureIcons[0],

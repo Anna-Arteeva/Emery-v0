@@ -8,7 +8,12 @@ export function FeatureSectionsStacked() {
   const { language } = useLanguage()
   const t = translations[language]
 
-  const features = [
+  const features = t.features?.items?.map((item, index) => ({
+    title: item.title,
+    description: item.description,
+    image: `/features/${["structured-course", "video-lessons", "immersive-vocabulary", "human-mentor"][index % 4]}.png`,
+    imagePosition: index % 2 === 0 ? "right" : "left",
+  })) || [
     {
       title: "Structured course",
       description: "Balanced grammar, comprehension, speaking, vocabulary, like in a top language school",
