@@ -9,47 +9,39 @@ export function FeatureCards() {
   const { language } = useLanguage()
   const t = translations[language]
 
-  const features = [
-    {
-      icon: <BookOpen className="w-6 h-6 text-purple-500" />,
-      title: "Structured course",
-      description: "Balanced grammar, comprehension, speaking, vocabulary, like in a top language school",
-      image: "/features/structured-course.png",
-    },
-    {
-      icon: <Video className="w-6 h-6 text-purple-500" />,
-      title: "Video lessons",
-      description: "Learn with engaging and authentic content created by native speakers",
-      image: "/features/video-lessons.png",
-    },
-    {
-      icon: <BookText className="w-6 h-6 text-purple-500" />,
-      title: "Immersive vocabulary",
-      description: "Different topics, new vocabulary, grammar, and interactive excursuses",
-      image: "/features/immersive-vocabulary.png",
-    },
-    {
-      icon: <Users className="w-6 h-6 text-purple-500" />,
-      title: "Human mentor",
-      description: "Get personal support while you progress through your learning journey",
-      image: "/features/human-mentor.png",
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6 text-purple-500" />,
-      title: "Real speaking practice",
-      description: "Build speaking confidence in a safe, non-judgmental space",
-      image: "/features/speaking-practice.png",
-    },
+  const featureIcons = [
+    <BookOpen key="book" className="w-6 h-6 text-purple-500" />,
+    <Video key="video" className="w-6 h-6 text-purple-500" />,
+    <BookText key="booktext" className="w-6 h-6 text-purple-500" />,
+    <Users key="users" className="w-6 h-6 text-purple-500" />,
+    <MessageCircle key="message" className="w-6 h-6 text-purple-500" />,
   ]
+
+  // Helper function to map feature index to image name
+  const getFeatureImageName = (index: number) => {
+    const imageNames = [
+      "structured-course",
+      "video-lessons",
+      "immersive-vocabulary",
+      "human-mentor",
+      "speaking-practice",
+    ]
+    return imageNames[index] || "placeholder"
+  }
+
+  const features = t.features.items.map((item, index) => ({
+    icon: featureIcons[index], // You'll need to keep your icons array separate
+    title: item.title,
+    description: item.description,
+    image: `/features/${getFeatureImageName(index)}.png`, // Helper function to map index to image name
+  }))
 
   return (
     <section className="py-20 bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Emery helps you learn</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our comprehensive approach combines the best learning methods with human support
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.featureCards.headline}</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t.featureCards.subheading}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">

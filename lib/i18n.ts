@@ -30,6 +30,30 @@ export const translations = {
       testimonialSubheading: "Real feedback from people learning with Emery",
     },
     features: {
+      learnTitle: "Learn at your own pace with structured lessons",
+      learnPoints: [
+        "Balanced grammar, comprehension, speaking, vocabulary",
+        "Engaging video content from native speakers",
+        "Personalized learning path based on your level",
+        "Interactive exercises for practice and feedback",
+      ],
+      practiceTitle: "Practice with real-world scenarios",
+      practiceSubtitle: "Apply what you learn in authentic contexts",
+      practicePoints: [
+        "Realistic conversation simulations",
+        "Cultural context and everyday expressions",
+        "Practical vocabulary you'll actually use",
+        "Build confidence through regular practice",
+      ],
+      supportTitle: "Get support when you need it",
+      supportPoints: [
+        "Personal mentor to guide your progress",
+        "Real-time feedback on pronunciation and grammar",
+        "Answers to your specific questions",
+        "Accountability and motivation to keep learning",
+      ],
+      headline: "How Emery helps you learn",
+      subheading: "Our comprehensive approach combines the best learning methods with human support",
       items: [
         {
           title: "Structured course",
@@ -53,11 +77,86 @@ export const translations = {
         },
       ],
     },
+    educationalVideos: {
+      title: "Unique educational videos",
+      description: "Learn to understand all English accents and speak like your favorite characters",
+      videoCount: "100K",
+    },
     mentors: {
       title: "Meet Our Mentors",
       subtitle: "Expert Guidance",
       description:
         "Our team of experienced language mentors is here to support your learning journey with personalized guidance and feedback.",
+      profiles: [
+        {
+          name: "Grace",
+          title: "THE PRONUNCIATION TRAINER",
+          location: "London",
+          accent: "British",
+          bio: "Specializes in helping students master the nuances of English pronunciation with personalized exercises.",
+        },
+        {
+          name: "Emma",
+          title: "THE ACCENT COACH",
+          location: "Dublin",
+          accent: "Irish",
+          bio: "Helps students develop natural-sounding speech patterns and rhythm in their English conversations.",
+        },
+        {
+          name: "Floris",
+          title: "THE GRAMMAR EXPERT",
+          location: "New York",
+          accent: "American",
+          bio: "Makes complex grammar rules simple and intuitive through practical, everyday examples.",
+        },
+        {
+          name: "Erin",
+          title: "THE CONVERSATION SPECIALIST",
+          location: "Toronto",
+          accent: "Canadian",
+          bio: "Focuses on building fluency and confidence through engaging, real-world conversation practice.",
+        },
+      ],
+      accentLabel: "Accent",
+    },
+    successStories: {
+      title: "Success Stories",
+      subtitle: "Real Results",
+      description: "Hear from our students who have transformed their English skills with Emery",
+      testimonials: [
+        {
+          id: "svitlana",
+          name: "Svitlana",
+          title: "University lecturer",
+          quote:
+            "The most valuable experience after the Emery Marathon is to realize that, only regularity gives results. After this marathon, I began to feel the necessity of a daily English portion.",
+          highlightedText: "only regularity gives results",
+        },
+        {
+          id: "olga",
+          name: "Olga",
+          title: "Flight Attendant",
+          quote:
+            "The most fascinating feature that I enjoyed in Emery is the video dictionary. Here you can acquire numerous new words, and it is genuinely cool that they are elucidated by native speakers from Britain, Canada and America.",
+          highlightedText: "most fascinating feature that I enjoyed in Emery is the video dictionary",
+        },
+        {
+          id: "myron",
+          name: "Myron",
+          title: "Software Developer",
+          quote:
+            "What I appreciate most about Emery is the structured approach to learning. The daily tasks and mentor feedback helped me improve my speaking skills dramatically in just a few weeks.",
+          highlightedText: "structured approach to learning",
+        },
+      ],
+    },
+    testimonials: {
+      title: "What our students say",
+      subtitle: "Real reviews from the App Store",
+    },
+    featureCards: {
+      headline: "How Emery helps you learn",
+      subheading: "Our comprehensive approach combines the best learning methods with human support",
     },
     comparison: {
       title: "Emery is always available. Anytime, anywhere.",
@@ -185,10 +284,6 @@ export const translations = {
       headline: "Are you ready to take your English to the next level?",
       cta: "Get Started",
     },
-    videoLessons: {
-      title: "UNIQUE EDUCATIONAL VIDEOS",
-      description: "Learn to understand all English accents and speak like your favorite characters",
-    },
   },
   de: {
     nav: {
@@ -246,11 +341,25 @@ export const translations = {
         },
       ],
     },
+    educationalVideos: {
+      title: "Einzigartige Lehrvideos",
+      description: "Lerne, alle englischen Akzente zu verstehen und wie deine Lieblingsfiguren zu sprechen",
+    },
     mentors: {
       title: "Unsere Mentoren",
       subtitle: "Experten-Anleitung",
       description:
         "Unser Team erfahrener Sprachmentoren unterstützt deinen Lernprozess mit persönlicher Anleitung und Feedback.",
+    },
+    successStories: {
+      title: "Erfolgsgeschichten",
+      subtitle: "Echte Ergebnisse",
+      description: "Höre von unseren Schülern, die ihre Englischkenntnisse mit Emery verbessert haben",
+      svitlana:
+        "Ich lerne seit 6 Monaten mit Emery und mein Selbstvertrauen beim Englischsprechen hat sich dramatisch verbessert. Das personalisierte Feedback der Mentoren war unbezahlbar.",
+      olga: "Nach vielen Apps und Kursen war Emery das erste Programm, das mir wirklich geholfen hat, meine Angst vor dem Sprechen zu überwinden. Jetzt kann ich selbstbewusst an Meetings bei der Arbeit teilnehmen.",
+      myron:
+        "Der strukturierte Ansatz kombiniert mit echter Gesprächspraxis hat mir geholfen, schneller Fortschritte zu machen als ich für möglich gehalten hätte. Ich fühle mich jetzt wohl dabei, Englisch in meinem Alltag zu verwenden.",
     },
     comparison: {
       title: "Emery ist immer verfügbar. Jederzeit und überall.",
@@ -378,10 +487,6 @@ export const translations = {
       headline: "Bist du bereit, dein Englisch auf die nächste Stufe zu bringen?",
       cta: "Jetzt starten",
     },
-    videoLessons: {
-      title: "EINZIGARTIGE LEHRVIDEOS",
-      description: "Lerne alle englischen Akzente zu verstehen und zu sprechen wie deine Lieblingsfiguren",
-    },
   },
   ru: {
     nav: {
@@ -440,11 +545,25 @@ export const translations = {
         },
       ],
     },
+    educationalVideos: {
+      title: "Уникальные обучающие видео",
+      description: "Научитесь понимать все английские акценты и говорить как ваши любимые персонажи",
+    },
     mentors: {
       title: "Познакомьтесь с нашими наставниками",
       subtitle: "Экспертное руководство",
       description:
         "Наша команда опытных языковых наставников готова поддержать ваш путь обучения с персонализированным руководством и обратной связью.",
+    },
+    successStories: {
+      title: "Истории успеха",
+      subtitle: "Реальные результаты",
+      description: "Послушайте наших студентов, которые улучшили свой английский с Emery",
+      svitlana:
+        "Я учусь с Emery уже 6 месяцев, и моя уверенность в разговоре на английском значительно улучшилась. Персонализированная обратная связь от наставников была бесценной.",
+      olga: "После многих приложений и курсов Emery была первой программой, которая действительно помогла мне преодолеть страх перед разговором. Теперь я могу уверенно участвовать в рабочих встречах.",
+      myron:
+        "Структурированный подход в сочетании с реальной разговорной практикой помог мне улучшить навыки быстрее, чем я считал возможным. Теперь я комфортно использую английский в повседневной жизни.",
     },
     comparison: {
       title: "Emery всегда доступен. В любое время, в любом месте.",
@@ -572,10 +691,6 @@ export const translations = {
       headline: "Готовы поднять свой английский на новый уровень?",
       cta: "Начать",
     },
-    videoLessons: {
-      title: "УНИКАЛЬНЫЕ ОБУЧАЮЩИЕ ВИДЕО",
-      description: "Научитесь понимать все английские акценты и говорить как ваши любимые персонажи",
-    },
   },
   fr: {
     nav: {
@@ -634,11 +749,25 @@ export const translations = {
         },
       ],
     },
+    educationalVideos: {
+      title: "Vidéos éducatives uniques",
+      description: "Apprenez à comprendre tous les accents anglais et à parler comme vos personnages préférés",
+    },
     mentors: {
       title: "Rencontrez nos mentors",
       subtitle: "Accompagnement expert",
       description:
         "Notre équipe de mentors linguistiques expérimentés est là pour soutenir votre parcours d'apprentissage avec des conseils et des retours personnalisés.",
+    },
+    successStories: {
+      title: "Histoires de réussite",
+      subtitle: "Résultats réels",
+      description: "Écoutez nos étudiants qui ont transformé leurs compétences en anglais avec Emery",
+      svitlana:
+        "J'apprends avec Emery depuis 6 mois et ma confiance en parlant anglais s'est considérablement améliorée. Les retours personnalisés des mentors ont été inestimables.",
+      olga: "Après avoir essayé de nombreuses applications et cours, Emery a été le premier programme qui m'a réellement aidée à surmonter ma peur de parler. Maintenant, je peux participer avec confiance aux réunions au travail.",
+      myron:
+        "L'approche structurée combinée à une pratique de conversation réelle m'a aidé à progresser plus rapidement que je ne pensais possible. Je suis maintenant à l'aise pour utiliser l'anglais dans ma vie quotidienne.",
     },
     comparison: {
       title: "Emery est toujours disponible. N'importe quand, n'importe où.",
@@ -766,10 +895,6 @@ export const translations = {
     callToAction: {
       headline: "Êtes-vous prêt à faire passer votre anglais au niveau supérieur ?",
       cta: "Commencer",
-    },
-    videoLessons: {
-      title: "VIDÉOS ÉDUCATIVES UNIQUES",
-      description: "Apprenez à comprendre tous les accents anglais et à parler comme vos personnages préférés",
     },
   },
 }

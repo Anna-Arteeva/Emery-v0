@@ -2,53 +2,113 @@
 
 import { useLanguage } from "./language-provider"
 import { translations } from "@/lib/i18n"
-import { MapPin } from "lucide-react"
-import Image from "next/image"
+import { MapPin, Play, Pause } from "lucide-react"
+import { useState, useRef, useEffect } from "react"
 import { FlagIcon } from "./flag-icon"
 
-// Sample mentor data
-const mentors = [
+// Updated mentor data with translations
+const getMentorData = (t: any) => [
   {
     id: 1,
-    name: "Emma Wilson",
-    title: "THE PRONUNCIATION TRAINER",
-    location: "London",
-    accent: "British",
-    image: "/mentors/emma.png",
-    bio: "Specializes in helping students master the nuances of English pronunciation with personalized exercises.",
+    name: t.mentors.profiles[0].name,
+    title: t.mentors.profiles[0].title,
+    location: t.mentors.profiles[0].location,
+    accent: t.mentors.profiles[0].accent,
+    videoUrl: "https://www.youtube.com/embed/5NH3zCO9XvQ",
+    bio: t.mentors.profiles[0].bio,
   },
   {
     id: 2,
-    name: "Sean Murphy",
-    title: "THE ACCENT COACH",
-    location: "Dublin",
-    accent: "Irish",
-    image: "/mentors/sean.png",
-    bio: "Helps students develop natural-sounding speech patterns and rhythm in their English conversations.",
+    name: t.mentors.profiles[1].name,
+    title: t.mentors.profiles[1].title,
+    location: t.mentors.profiles[1].location,
+    accent: t.mentors.profiles[1].accent,
+    videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
+    bio: t.mentors.profiles[1].bio,
   },
   {
     id: 3,
-    name: "Jessica Taylor",
-    title: "THE GRAMMAR EXPERT",
-    location: "New York",
-    accent: "American",
-    image: "/mentors/jessica.png",
-    bio: "Makes complex grammar rules simple and intuitive through practical, everyday examples.",
+    name: t.mentors.profiles[2].name,
+    title: t.mentors.profiles[2].title,
+    location: t.mentors.profiles[2].location,
+    accent: t.mentors.profiles[2].accent,
+    videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
+    bio: t.mentors.profiles[2].bio,
   },
   {
     id: 4,
-    name: "David Fletcher",
-    title: "THE CONVERSATION SPECIALIST",
-    location: "Auckland",
-    accent: "New Zealand",
-    image: "/mentors/david.png",
-    bio: "Focuses on building fluency and confidence through engaging, real-world conversation practice.",
+    name: t.mentors.profiles[3].name,
+    title: t.mentors.profiles[3].title,
+    location: t.mentors.profiles[3].location,
+    accent: t.mentors.profiles[3].accent,
+    videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
+    bio: t.mentors.profiles[3].bio,
   },
 ]
 
 export function OurMentors() {
   const { language } = useLanguage()
   const t = translations[language]
+  const mentors = getMentorData(t)
+  const [activeVideo, setActiveVideo] = useState<number | null>(null)
+  const [isPlaying, setIsPlaying] = useState<{ [key: number]: boolean }>({})
+  const iframeRefs = useRef<{ [key: number]: HTMLIFrameElement | null }>({})
+  const [iframesLoaded, setIframesLoaded] = useState<{ [key: number]: boolean }>({})
+
+  // Initialize YouTube API
+  useEffect(() => {
+    // Add YouTube API script if it doesn't exist
+    if (!window.YT) {
+      const tag = document.createElement("script")
+      tag.src = "https://www.youtube.com/iframe_api"
+      const firstScriptTag = document.getElementsByTagName("script")[0]
+      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag)
+    }
+  }, [])
+
+  const handleVideoClick = (mentorId: number) => {
+    if (activeVideo === mentorId) {
+      // Toggle play/pause for current video
+      const iframe = iframeRefs.current[mentorId]
+      if (iframe) {
+        if (isPlaying[mentorId]) {
+          iframe.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*")
+          setIsPlaying((prev) => ({ ...prev, [mentorId]: false }))
+        } else {
+          iframe.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', "*")
+          // Unmute the video when playing
+          iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', "*")
+          setIsPlaying((prev) => ({ ...prev, [mentorId]: true }))
+        }
+      }
+    } else {
+      // Pause previous video if any
+      if (activeVideo !== null && iframeRefs.current[activeVideo]) {
+        iframeRefs.current[activeVideo]?.contentWindow?.postMessage(
+          '{"event":"command","func":"pauseVideo","args":""}',
+          "*",
+        )
+      }
+
+      // Set new active video
+      setActiveVideo(mentorId)
+
+      // Play the new video
+      setTimeout(() => {
+        const iframe = iframeRefs.current[mentorId]
+        if (iframe) {
+          iframe.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', "*")
+          // Unmute the video when playing
+          iframe.contentWindow?.postMessage('{"event":"command","func":"unMute","args":""}', "*")
+          setIsPlaying((prev) => ({ ...prev, [mentorId]: true }))
+        }
+      }, 100)
+    }
+  }
+
+  const handleIframeLoad = (mentorId: number) => {
+    setIframesLoaded((prev) => ({ ...prev, [mentorId]: true }))
+  }
 
   return (
     <section className="py-20 bg-white">
@@ -61,36 +121,58 @@ export function OurMentors() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {mentors.map((mentor) => (
-            <div key={mentor.id} className="group">
-              <div className="bg-gray-50 rounded-xl overflow-hidden transition-all duration-300 group-hover:shadow-md">
-                <div className="aspect-square relative overflow-hidden">
-                  <Image
-                    src={mentor.image || "/placeholder.svg?height=400&width=400&query=casual portrait"}
-                    alt={mentor.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+            <div key={mentor.id} className="group flex flex-col items-start">
+              {/* Circular video container with flat bottom-left corner */}
+              <div
+                className="relative w-64 h-64 mx-auto mb-6 cursor-pointer group overflow-hidden"
+                style={{
+                  borderRadius: "50% 50% 50% 0",
+                  border: "10px solid #E5E3FF",
+                }}
+              >
+                {/* YouTube iframe with scaling */}
+                <div className="absolute inset-0 overflow-hidden bg-gray-100" style={{ borderRadius: "50% 50% 50% 0" }}>
+                  <iframe
+                    ref={(el) => (iframeRefs.current[mentor.id] = el)}
+                    src={`${mentor.videoUrl}?enablejsapi=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&loop=1`}
+                    title={mentor.name}
+                    className="w-[180%] h-[180%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    frameBorder="0"
+                    onLoad={() => handleIframeLoad(mentor.id)}
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="font-medium text-gray-900 mb-1">{mentor.name}</h3>
-                  <p className="text-xs font-semibold text-purple-600 tracking-wider mb-3">{mentor.title}</p>
 
-                  {/* Location on its own line */}
-                  <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <MapPin className="h-3.5 w-3.5 mr-1.5 text-gray-400" />
-                    <span>{mentor.location}</span>
+                {/* Play button overlay */}
+                <div
+                  className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors"
+                  style={{ borderRadius: "50% 50% 50% 0" }}
+                  onClick={() => handleVideoClick(mentor.id)}
+                >
+                  <div className="w-16 h-16 rounded-full bg-white/80 flex items-center justify-center">
+                    {isPlaying[mentor.id] ? (
+                      <Pause className="w-8 h-8 text-gray-800" />
+                    ) : (
+                      <Play className="w-8 h-8 text-gray-800 ml-1" />
+                    )}
                   </div>
-
-                  {/* Accent on its own line - removed Globe icon */}
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <span className="flex items-center gap-1.5 ml-0.5">
-                      <FlagIcon country={mentor.accent} />
-                      {mentor.accent} Accent
-                    </span>
-                  </div>
-
-                  <p className="text-sm text-gray-600">{mentor.bio}</p>
                 </div>
+              </div>
+
+              {/* Mentor info - left aligned */}
+              <div className="text-left w-full">
+                <h3 className="font-medium text-gray-900 text-xl mb-1">{mentor.name}</h3>
+                <div className="flex items-center text-sm text-gray-500 mb-2">
+                  <span className="flex items-center gap-1.5">
+                    <FlagIcon country={mentor.accent} />
+                    {mentor.accent} {t.mentors.accentLabel}
+                  </span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5 text-gray-400" />
+                  <span>{mentor.location}</span>
+                </div>
+                <p className="text-sm text-gray-600">{mentor.bio}</p>
               </div>
             </div>
           ))}

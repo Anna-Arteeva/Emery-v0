@@ -16,8 +16,8 @@ export function FeatureSectionsStacked() {
       imagePosition: "right",
     },
     {
-      title: "Video lessons",
-      description: "Learn with engaging and authentic content created by native speakers",
+      title: "Real speaking practice",
+      description: "Build speaking confidence in a safe, non-judgmental space",
       image: "/features/video-lessons.png",
       imagePosition: "left",
     },
@@ -33,16 +33,10 @@ export function FeatureSectionsStacked() {
       image: "/features/human-mentor.png",
       imagePosition: "left",
     },
-    {
-      title: "Real speaking practice",
-      description: "Build speaking confidence in a safe, non-judgmental space",
-      image: "/features/speaking-practice-new.png",
-      imagePosition: "right",
-    },
   ]
 
   return (
-    <section className="py-8 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4 max-w-[900px]">
         {features.map((feature, index) => (
           <div
