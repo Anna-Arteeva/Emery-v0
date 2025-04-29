@@ -3,15 +3,18 @@ export const translations = {
     nav: {
       features: "Features",
       howItWorks: "How It Works",
+      mentors: "Mentors",
+      testimonials: "Testimonials",
+      faq: "FAQ",
       pricing: "Pricing",
-      login: "Login",
+      login: "Sign in",
       getStarted: "Get Started",
     },
     hero: {
       badge: "Language Learning Reimagined",
       headline: "Learn English on your terms. With human mentor support along the way.",
-      mainHeading: "Have fun learning English.",
-      subHeading: "With a mentor to guide you.",
+      mainHeading: "Master English at your pace, with human mentor support",
+      subHeading: "",
       intro:
         "Structured courses, real-world practice, and human guidance – for learners who've tried apps, but want real progress.",
       cta: "Get Started",
@@ -68,11 +71,11 @@ export const translations = {
           description: "Different topics, new vocabulary, grammar, and interactive excursuses",
         },
         {
-          title: "Human mentor",
+          title: "Human mentor support",
           description: "Get personal support while you progress through your learning journey",
         },
         {
-          title: "Real speaking practice",
+          title: "Speaking practice",
           description: "Build speaking confidence in a safe, non-judgmental space",
         },
       ],
@@ -227,10 +230,6 @@ export const translations = {
         },
       ],
     },
-    testimonials: {
-      title: "What our students say",
-      subtitle: "Real reviews from the App Store",
-    },
     faq: {
       title: "Frequently Asked Questions",
       subtitle: "Got Questions?",
@@ -289,6 +288,9 @@ export const translations = {
     nav: {
       features: "Funktionen",
       howItWorks: "Wie es funktioniert",
+      mentors: "Mentoren",
+      testimonials: "Erfahrungen",
+      faq: "FAQ",
       pricing: "Preise",
       login: "Anmelden",
       getStarted: "Loslegen",
@@ -296,8 +298,8 @@ export const translations = {
     hero: {
       badge: "Sprachenlernen neu gedacht",
       headline: "Lerne Englisch zu deinen Bedingungen. Mit menschlicher Mentor-Unterstützung.",
-      mainHeading: "Lerne Englisch mit Spaß.",
-      subHeading: "Mit einem Mentor, der dich führt.",
+      mainHeading: "Beherrsche Englisch in deinem Tempo, mit Unterstützung durch menschliche Mentoren",
+      subHeading: "",
       intro:
         "Strukturierte Kurse, Übungen aus der realen Welt und menschliche Anleitung – für Lernende, die Apps ausprobiert haben, aber echte Fortschritte erzielen möchten.",
       cta: "Jetzt starten",
@@ -306,16 +308,38 @@ export const translations = {
     },
     whyItWorks: {
       subtitle: "Warum es funktioniert",
-      headline: "Mensch + Technologie",
+      headline: "Strukturierter Kurs + Menschlicher Mentor",
       mainText:
         "Apps allein funktionieren oft nicht. Deshalb kombiniert Emery strukturierte Inhalte, die jederzeit zugänglich sind, mit der Motivation, Klarheit und dem Feedback, das nur menschliche Mentoren bieten können.",
       testimonial:
-        "Ich habe vorher Apps ausprobiert, aber das ist das erste Mal, dass ich das Gefühl habe, wirklich zu lernen Das personalisierte Feedback macht den Unterschied",
+        "Ich habe vorher Apps ausprobiert, aber das ist das erste Mal, dass ich das Gefühl habe, wirklich zu lernen. Die menschliche Anleitung macht den Unterschied",
       testimonialLocation: "Englischlernende auf mittlerem Niveau",
       testimonialHeading: "Was unsere Schüler sagen",
       testimonialSubheading: "Echtes Feedback von Menschen, die mit Emery lernen",
     },
     features: {
+      learnTitle: "Lerne in deinem eigenen Tempo mit strukturierten Lektionen",
+      learnPoints: [
+        "Ausgewogene Grammatik, Verständnis, Sprechen und Vokabeln",
+        "Ansprechende Videoinhalte von Muttersprachlern",
+        "Personalisierter Lernpfad basierend auf deinem Niveau",
+        "Interaktive Übungen für Praxis und Feedback",
+      ],
+      practiceTitle: "Übe mit Szenarien aus der realen Welt",
+      practiceSubtitle: "Wende an, was du in authentischen Kontexten lernst",
+      practicePoints: [
+        "Realistische Gesprächssimulationen",
+        "Kultureller Kontext und alltägliche Ausdrücke",
+        "Praktischer Wortschatz, den du tatsächlich verwenden wirst",
+        "Baue Selbstvertrauen durch regelmäßige Übung auf",
+      ],
+      supportTitle: "Erhalte Unterstützung, wenn du sie brauchst",
+      supportPoints: [
+        "Persönlicher Mentor, der deinen Fortschritt begleitet",
+        "Echtzeit-Feedback zu Aussprache und Grammatik",
+        "Antworten auf deine spezifischen Fragen",
+        "Verantwortlichkeit und Motivation zum Weiterlernen",
+      ],
       headline: "Wie Emery dir beim Lernen hilft",
       subheading: "Unser umfassender Ansatz kombiniert die besten Lernmethoden mit menschlicher Unterstützung",
       items: [
@@ -344,22 +368,81 @@ export const translations = {
     educationalVideos: {
       title: "Einzigartige Lehrvideos",
       description: "Lerne, alle englischen Akzente zu verstehen und wie deine Lieblingsfiguren zu sprechen",
+      videoCount: "100K",
     },
     mentors: {
       title: "Unsere Mentoren",
       subtitle: "Experten-Anleitung",
       description:
         "Unser Team erfahrener Sprachmentoren unterstützt deinen Lernprozess mit persönlicher Anleitung und Feedback.",
+      profiles: [
+        {
+          name: "Grace",
+          title: "DIE AUSSPRACHE-TRAINERIN",
+          location: "London",
+          accent: "British",
+          bio: "Spezialisiert sich darauf, Schülern zu helfen, die Nuancen der englischen Aussprache mit personalisierten Übungen zu meistern.",
+        },
+        {
+          name: "Emma",
+          title: "DIE AKZENT-COACH",
+          location: "Dublin",
+          accent: "Irish",
+          bio: "Hilft Schülern, natürlich klingende Sprachmuster und Rhythmus in ihren englischen Gesprächen zu entwickeln.",
+        },
+        {
+          name: "Floris",
+          title: "DER GRAMMATIK-EXPERTE",
+          location: "New York",
+          accent: "American",
+          bio: "Macht komplexe Grammatikregeln durch praktische, alltägliche Beispiele einfach und intuitiv.",
+        },
+        {
+          name: "Erin",
+          title: "DIE KONVERSATIONS-SPEZIALISTIN",
+          location: "Toronto",
+          accent: "Canadian",
+          bio: "Konzentriert sich auf den Aufbau von Flüssigkeit und Selbstvertrauen durch ansprechende, reale Konversationspraxis.",
+        },
+      ],
+      accentLabel: "Akzent",
     },
     successStories: {
       title: "Erfolgsgeschichten",
       subtitle: "Echte Ergebnisse",
       description: "Höre von unseren Schülern, die ihre Englischkenntnisse mit Emery verbessert haben",
-      svitlana:
-        "Ich lerne seit 6 Monaten mit Emery und mein Selbstvertrauen beim Englischsprechen hat sich dramatisch verbessert. Das personalisierte Feedback der Mentoren war unbezahlbar.",
-      olga: "Nach vielen Apps und Kursen war Emery das erste Programm, das mir wirklich geholfen hat, meine Angst vor dem Sprechen zu überwinden. Jetzt kann ich selbstbewusst an Meetings bei der Arbeit teilnehmen.",
-      myron:
-        "Der strukturierte Ansatz kombiniert mit echter Gesprächspraxis hat mir geholfen, schneller Fortschritte zu machen als ich für möglich gehalten hätte. Ich fühle mich jetzt wohl dabei, Englisch in meinem Alltag zu verwenden.",
+      testimonials: [
+        {
+          id: "svitlana",
+          name: "Svitlana",
+          title: "Universitätsdozentin",
+          quote:
+            "Die wertvollste Erfahrung nach dem Emery-Marathon ist zu erkennen, dass nur Regelmäßigkeit Ergebnisse bringt. Nach diesem Marathon begann ich, die Notwendigkeit einer täglichen Englisch-Portion zu spüren.",
+          highlightedText: "nur Regelmäßigkeit Ergebnisse bringt",
+        },
+        {
+          id: "olga",
+          name: "Flugbegleiterin",
+          quote:
+            "Das faszinierendste Feature, das ich bei Emery genossen habe, ist das Video-Wörterbuch. Hier kann man zahlreiche neue Wörter erwerben, und es ist wirklich cool, dass sie von Muttersprachlern aus Großbritannien, Kanada und Amerika erläutert werden.",
+          highlightedText: "faszinierendste Feature, das ich bei Emery genossen habe, ist das Video-Wörterbuch",
+        },
+        {
+          id: "myron",
+          name: "Softwareentwickler",
+          quote:
+            "Was ich an Emery am meisten schätze, ist der strukturierte Lernansatz. Die täglichen Aufgaben und das Mentor-Feedback haben mir geholfen, meine Sprechfähigkeiten in nur wenigen Wochen dramatisch zu verbessern.",
+          highlightedText: "strukturierte Lernansatz",
+        },
+      ],
+    },
+    testimonials: {
+      title: "Was unsere Schüler sagen",
+      subtitle: "Echte Bewertungen aus dem App Store",
+    },
+    featureCards: {
+      headline: "Wie Emery dir beim Lernen hilft",
+      subheading: "Unser umfassender Ansatz kombiniert die besten Lernmethoden mit menschlicher Unterstützung",
     },
     comparison: {
       title: "Emery ist immer verfügbar. Jederzeit und überall.",
@@ -430,10 +513,6 @@ export const translations = {
         },
       ],
     },
-    testimonials: {
-      title: "Was unsere Schüler sagen",
-      subtitle: "Echte Bewertungen aus dem App Store",
-    },
     faq: {
       title: "Häufig gestellte Fragen",
       subtitle: "Fragen?",
@@ -492,15 +571,18 @@ export const translations = {
     nav: {
       features: "Возможности",
       howItWorks: "Как это работает",
+      mentors: "Наставники",
+      testimonials: "Отзывы",
+      faq: "Вопросы",
       pricing: "Цены",
-      login: "Вход",
+      login: "Войти",
       getStarted: "Начать",
     },
     hero: {
       badge: "Изучение языка переосмыслено",
       headline: "Изучайте английский на своих условиях. С поддержкой наставника на каждом шагу.",
-      mainHeading: "Изучайте английский с удовольствием.",
-      subHeading: "С наставником, который вас направляет.",
+      mainHeading: "Осваивайте английский в своем темпе, с поддержкой наставника-человека",
+      subHeading: "",
       intro:
         "Структурированные курсы, практика из реальной жизни и человеческое руководство – для тех, кто пробовал приложения, но хочет реального прогресса.",
       cta: "Начать",
@@ -509,16 +591,38 @@ export const translations = {
     },
     whyItWorks: {
       subtitle: "Почему это работает",
-      headline: "Человек + Технологии",
+      headline: "Структурированный курс + Наставник-человек",
       mainText:
         "Одни приложения часто не работают. Поэтому Emery сочетает структурированный контент, доступный в любое время, с мотивацией, ясностью и обратной связью, которые могут предоставить только наставники-люди.",
       testimonial:
-        "Я пробовал приложения раньше, но это первый раз, когда я чувствую, что действительно учусь Персонализированная обратная связь имеет решающее значение",
+        "Я пробовал приложения раньше, но это первый раз, когда я чувствую, что действительно учусь. Человеческое руководство имеет решающее значение",
       testimonialLocation: "Изучающий английский на среднем уровне",
       testimonialHeading: "Что говорят наши студенты",
       testimonialSubheading: "Реальные отзывы от людей, изучающих язык с Emery",
     },
     features: {
+      learnTitle: "Учитесь в своем темпе со структурированными уроками",
+      learnPoints: [
+        "Сбалансированная грамматика, понимание, разговорная речь, словарный запас",
+        "Увлекательный видеоконтент от носителей языка",
+        "Персонализированный путь обучения на основе вашего уровня",
+        "Интерактивные упражнения для практики и обратной связи",
+      ],
+      practiceTitle: "Практикуйтесь в реальных сценариях",
+      practiceSubtitle: "Применяйте то, что вы изучаете, в аутентичных контекстах",
+      practicePoints: [
+        "Реалистичные симуляции разговоров",
+        "Культурный контекст и повседневные выражения",
+        "Практический словарный запас, который вы действительно будете использовать",
+        "Развивайте уверенность через регулярную практику",
+      ],
+      supportTitle: "Получайте поддержку, когда она вам нужна",
+      supportPoints: [
+        "Личный наставник для руководства вашим прогрессом",
+        "Обратная связь в реальном времени по произношению и грамматике",
+        "Ответы на ваши конкретные вопросы",
+        "Ответственность и мотивация для продолжения обучения",
+      ],
       headline: "Как Emery помогает вам учиться",
       subheading: "Наш комплексный подход сочетает лучшие методы обучения с человеческой поддержкой",
       items: [
@@ -548,22 +652,83 @@ export const translations = {
     educationalVideos: {
       title: "Уникальные обучающие видео",
       description: "Научитесь понимать все английские акценты и говорить как ваши любимые персонажи",
+      videoCount: "100K",
     },
     mentors: {
       title: "Познакомьтесь с нашими наставниками",
       subtitle: "Экспертное руководство",
       description:
         "Наша команда опытных языковых наставников готова поддержать ваш путь обучения с персонализированным руководством и обратной связью.",
+      profiles: [
+        {
+          name: "Грейс",
+          title: "ТРЕНЕР ПО ПРОИЗНОШЕНИЮ",
+          location: "Лондон",
+          accent: "British",
+          bio: "Специализируется на помощи студентам в освоении нюансов английского произношения с персонализированными упражнениями.",
+        },
+        {
+          name: "Эмма",
+          title: "КОУЧ ПО АКЦЕНТУ",
+          location: "Дублин",
+          accent: "Irish",
+          bio: "Помогает студентам развивать естественно звучащие речевые паттерны и ритм в их английских разговорах.",
+        },
+        {
+          name: "Флорис",
+          title: "ЭКСПЕРТ ПО ГРАММАТИКЕ",
+          location: "Нью-Йорк",
+          accent: "American",
+          bio: "Делает сложные правила грамматики простыми и интуитивно понятными через практические, повседневные примеры.",
+        },
+        {
+          name: "Эрин",
+          title: "СПЕЦИАЛИСТ ПО РАЗГОВОРНОЙ РЕЧИ",
+          location: "Торонто",
+          accent: "Canadian",
+          bio: "Фокусируется на развитии беглости и уверенности через увлекательную практику разговорной речи из реального мира.",
+        },
+      ],
+      accentLabel: "Акцент",
     },
     successStories: {
       title: "Истории успеха",
       subtitle: "Реальные результаты",
       description: "Послушайте наших студентов, которые улучшили свой английский с Emery",
-      svitlana:
-        "Я учусь с Emery уже 6 месяцев, и моя уверенность в разговоре на английском значительно улучшилась. Персонализированная обратная связь от наставников была бесценной.",
-      olga: "После многих приложений и курсов Emery была первой программой, которая действительно помогла мне преодолеть страх перед разговором. Теперь я могу уверенно участвовать в рабочих встречах.",
-      myron:
-        "Структурированный подход в сочетании с реальной разговорной практикой помог мне улучшить навыки быстрее, чем я считал возможным. Теперь я комфортно использую английский в повседневной жизни.",
+      testimonials: [
+        {
+          id: "svitlana",
+          name: "Свитлана",
+          title: "Университетский преподаватель",
+          quote:
+            "Самый ценный опыт после Марафона Emery — это осознание того, что только регулярность дает результаты. После этого марафона я начала чувствовать необходимость ежедневной порции английского.",
+          highlightedText: "только регулярность дает результаты",
+        },
+        {
+          id: "olga",
+          name: "Ольга",
+          title: "Бортпроводница",
+          quote:
+            "Самая увлекательная функция, которая мне понравилась в Emery, — это видеословарь. Здесь вы можете приобрести множество новых слов, и это действительно круто, что они объясняются носителями языка из Британии, Канады и Америки.",
+          highlightedText: "самая увлекательная функция, которая мне понравилась в Emery, — это видеословарь",
+        },
+        {
+          id: "myron",
+          name: "Мирон",
+          title: "Разработчик программного обеспечения",
+          quote:
+            "Что я больше всего ценю в Emery, так это структурированный подход к обучению. Ежедневные задания и обратная связь от наставника помогли мне значительно улучшить навыки разговорной речи всего за несколько недель.",
+          highlightedText: "структурированный подход к обучению",
+        },
+      ],
+    },
+    testimonials: {
+      title: "Что говорят наши студенты",
+      subtitle: "Реальные отзывы из App Store",
+    },
+    featureCards: {
+      headline: "Как Emery помогает вам учиться",
+      subheading: "Наш комплексный подход сочетает лучшие методы обучения с человеческой поддержкой",
     },
     comparison: {
       title: "Emery всегда доступен. В любое время, в любом месте.",
@@ -634,10 +799,6 @@ export const translations = {
         },
       ],
     },
-    testimonials: {
-      title: "Что говорят наши студенты",
-      subtitle: "Реальные отзывы из App Store",
-    },
     faq: {
       title: "Часто задаваемые вопросы",
       subtitle: "Есть вопросы?",
@@ -696,6 +857,9 @@ export const translations = {
     nav: {
       features: "Fonctionnalités",
       howItWorks: "Comment ça marche",
+      mentors: "Mentors",
+      testimonials: "Témoignages",
+      faq: "FAQ",
       pricing: "Tarifs",
       login: "Connexion",
       getStarted: "Commencer",
@@ -703,8 +867,8 @@ export const translations = {
     hero: {
       badge: "L'apprentissage des langues réinventé",
       headline: "Apprenez l'anglais à votre rythme. Avec le soutien d'un mentor humain.",
-      mainHeading: "Apprenez l'anglais avec plaisir.",
-      subHeading: "Avec un mentor pour vous guider.",
+      mainHeading: "Maîtrisez l'anglais à votre rythme, avec le soutien d'un mentor humain",
+      subHeading: "",
       intro:
         "Des cours structurés, une pratique réelle et un accompagnement humain – pour les apprenants qui ont essayé des applications, mais qui veulent de vrais progrès.",
       cta: "Commencer",
@@ -713,16 +877,38 @@ export const translations = {
     },
     whyItWorks: {
       subtitle: "Pourquoi ça marche",
-      headline: "Humain + Technologie",
+      headline: "Cours structuré + Mentor humain",
       mainText:
         "Les applications seules ne fonctionnent souvent pas. C'est pourquoi Emery combine un contenu structuré accessible à tout moment avec la motivation, la clarté et les retours que seuls des mentors humains peuvent offrir.",
       testimonial:
-        "J'ai essayé des applications avant, mais c'est la première fois que j'ai l'impression d'apprendre vraiment Les retours personnalisés font toute la différence",
+        "J'ai essayé des applications avant, mais c'est la première fois que j'ai l'impression d'apprendre vraiment. Les conseils humains font toute la différence",
       testimonialLocation: "Apprenant d'anglais de niveau intermédiaire",
       testimonialHeading: "Ce que disent nos étudiants",
       testimonialSubheading: "Des retours authentiques de personnes apprenant avec Emery",
     },
     features: {
+      learnTitle: "Apprenez à votre rythme avec des leçons structurées",
+      learnPoints: [
+        "Grammaire équilibrée, compréhension, expression orale, vocabulaire",
+        "Contenu vidéo captivant de locuteurs natifs",
+        "Parcours d'apprentissage personnalisé basé sur votre niveau",
+        "Exercices interactifs pour la pratique et les retours",
+      ],
+      practiceTitle: "Pratiquez avec des scénarios du monde réel",
+      practiceSubtitle: "Appliquez ce que vous apprenez dans des contextes authentiques",
+      practicePoints: [
+        "Simulations de conversation réalistes",
+        "Contexte culturel et expressions quotidiennes",
+        "Vocabulaire pratique que vous utiliserez réellement",
+        "Développez votre confiance grâce à une pratique régulière",
+      ],
+      supportTitle: "Obtenez du soutien quand vous en avez besoin",
+      supportPoints: [
+        "Mentor personnel pour guider votre progression",
+        "Retours en temps réel sur la prononciation et la grammaire",
+        "Réponses à vos questions spécifiques",
+        "Responsabilité et motivation pour continuer à apprendre",
+      ],
       headline: "Comment Emery vous aide à apprendre",
       subheading: "Notre approche complète combine les meilleures méthodes d'apprentissage avec un soutien humain",
       items: [
@@ -752,22 +938,84 @@ export const translations = {
     educationalVideos: {
       title: "Vidéos éducatives uniques",
       description: "Apprenez à comprendre tous les accents anglais et à parler comme vos personnages préférés",
+      videoCount: "100K",
     },
     mentors: {
       title: "Rencontrez nos mentors",
       subtitle: "Accompagnement expert",
       description:
         "Notre équipe de mentors linguistiques expérimentés est là pour soutenir votre parcours d'apprentissage avec des conseils et des retours personnalisés.",
+      profiles: [
+        {
+          name: "Grace",
+          title: "LA FORMATRICE EN PRONONCIATION",
+          location: "Londres",
+          accent: "British",
+          bio: "Se spécialise dans l'aide aux étudiants pour maîtriser les nuances de la prononciation anglaise avec des exercices personnalisés.",
+        },
+        {
+          name: "Emma",
+          title: "LA COACH D'ACCENT",
+          location: "Dublin",
+          accent: "Irish",
+          bio: "Aide les étudiants à développer des modèles de parole et un rythme naturels dans leurs conversations en anglais.",
+        },
+        {
+          name: "Floris",
+          title: "L'EXPERT EN GRAMMAIRE",
+          location: "New York",
+          accent: "American",
+          bio: "Rend les règles grammaticales complexes simples et intuitives grâce à des exemples pratiques et quotidiens.",
+        },
+        {
+          name: "Erin",
+          title: "LA SPÉCIALISTE DE LA CONVERSATION",
+          location: "Toronto",
+          accent: "Canadian",
+          bio: "Se concentre sur le développement de la fluidité et de la confiance grâce à une pratique de conversation engageante et réelle.",
+        },
+      ],
+      accentLabel: "Accent",
     },
     successStories: {
       title: "Histoires de réussite",
       subtitle: "Résultats réels",
       description: "Écoutez nos étudiants qui ont transformé leurs compétences en anglais avec Emery",
-      svitlana:
-        "J'apprends avec Emery depuis 6 mois et ma confiance en parlant anglais s'est considérablement améliorée. Les retours personnalisés des mentors ont été inestimables.",
-      olga: "Après avoir essayé de nombreuses applications et cours, Emery a été le premier programme qui m'a réellement aidée à surmonter ma peur de parler. Maintenant, je peux participer avec confiance aux réunions au travail.",
-      myron:
-        "L'approche structurée combinée à une pratique de conversation réelle m'a aidé à progresser plus rapidement que je ne pensais possible. Je suis maintenant à l'aise pour utiliser l'anglais dans ma vie quotidienne.",
+      testimonials: [
+        {
+          id: "svitlana",
+          name: "Svitlana",
+          title: "Professeure d'université",
+          quote:
+            "L'expérience la plus précieuse après le Marathon Emery est de réaliser que seule la régularité donne des résultats. Après ce marathon, j'ai commencé à ressentir la nécessité d'une portion quotidienne d'anglais.",
+          highlightedText: "seule la régularité donne des résultats",
+        },
+        {
+          id: "olga",
+          name: "Olga",
+          title: "Hôtesse de l'air",
+          quote:
+            "La fonctionnalité la plus fascinante que j'ai appréciée dans Emery est le dictionnaire vidéo. Ici, vous pouvez acquérir de nombreux nouveaux mots, et c'est vraiment cool qu'ils soient expliqués par des locuteurs natifs de Grande-Bretagne, du Canada et d'Amérique.",
+          highlightedText:
+            "la fonctionnalité la plus fascinante que j'ai appréciée dans Emery est le dictionnaire vidéo",
+        },
+        {
+          id: "myron",
+          name: "Myron",
+          title: "Développeur de logiciels",
+          quote:
+            "Ce que j'apprécie le plus chez Emery, c'est l'approche structurée de l'apprentissage. Les tâches quotidiennes et les retours des mentors m'ont aidé à améliorer considérablement mes compétences en expression orale en quelques semaines seulement.",
+          highlightedText: "l'approche structurée de l'apprentissage",
+        },
+      ],
+    },
+    testimonials: {
+      title: "Ce que disent nos étudiants",
+      subtitle: "Avis réels de l'App Store",
+    },
+    featureCards: {
+      headline: "Comment Emery vous aide à apprendre",
+      subheading: "Notre approche complète combine les meilleures méthodes d'apprentissage avec un soutien humain",
     },
     comparison: {
       title: "Emery est toujours disponible. N'importe quand, n'importe où.",
@@ -838,10 +1086,6 @@ export const translations = {
           otherAppDescription: "Moins de pression mais moins de motivation",
         },
       ],
-    },
-    testimonials: {
-      title: "Ce que disent nos étudiants",
-      subtitle: "Avis réels de l'App Store",
     },
     faq: {
       title: "Questions fréquemment posées",

@@ -9,7 +9,7 @@ export function FaqSection() {
   const t = translations[language]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="faq">
       <div className="container-custom">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">{t.faq.subtitle}</p>

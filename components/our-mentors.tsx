@@ -7,44 +7,90 @@ import { useState, useRef, useEffect } from "react"
 import { FlagIcon } from "./flag-icon"
 
 // Updated mentor data with translations
-const getMentorData = (t: any) => [
-  {
-    id: 1,
-    name: t.mentors.profiles[0].name,
-    title: t.mentors.profiles[0].title,
-    location: t.mentors.profiles[0].location,
-    accent: t.mentors.profiles[0].accent,
-    videoUrl: "https://www.youtube.com/embed/5NH3zCO9XvQ",
-    bio: t.mentors.profiles[0].bio,
-  },
-  {
-    id: 2,
-    name: t.mentors.profiles[1].name,
-    title: t.mentors.profiles[1].title,
-    location: t.mentors.profiles[1].location,
-    accent: t.mentors.profiles[1].accent,
-    videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
-    bio: t.mentors.profiles[1].bio,
-  },
-  {
-    id: 3,
-    name: t.mentors.profiles[2].name,
-    title: t.mentors.profiles[2].title,
-    location: t.mentors.profiles[2].location,
-    accent: t.mentors.profiles[2].accent,
-    videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
-    bio: t.mentors.profiles[2].bio,
-  },
-  {
-    id: 4,
-    name: t.mentors.profiles[3].name,
-    title: t.mentors.profiles[3].title,
-    location: t.mentors.profiles[3].location,
-    accent: t.mentors.profiles[3].accent,
-    videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
-    bio: t.mentors.profiles[3].bio,
-  },
-]
+const getMentorData = (t: any) => {
+  // Check if the required translation structure exists
+  if (!t.mentors || !t.mentors.profiles || !Array.isArray(t.mentors.profiles)) {
+    // Fallback data if translations are missing
+    return [
+      {
+        id: 1,
+        name: "Grace",
+        title: "Pronunciation Trainer",
+        location: "London",
+        accent: "British",
+        videoUrl: "https://www.youtube.com/embed/5NH3zCO9XvQ",
+        bio: "Specializes in helping students master the nuances of English pronunciation with personalized exercises.",
+      },
+      {
+        id: 2,
+        name: "Emma",
+        title: "Accent Coach",
+        location: "Dublin",
+        accent: "Irish",
+        videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
+        bio: "Helps students develop natural-sounding speech patterns and rhythm in their English conversations.",
+      },
+      {
+        id: 3,
+        name: "Floris",
+        title: "Grammar Expert",
+        location: "New York",
+        accent: "American",
+        videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
+        bio: "Makes complex grammar rules simple and intuitive through practical, everyday examples.",
+      },
+      {
+        id: 4,
+        name: "Erin",
+        title: "Conversation Specialist",
+        location: "Toronto",
+        accent: "Canadian",
+        videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
+        bio: "Focuses on building fluency and confidence through engaging, real-world conversation practice.",
+      },
+    ]
+  }
+
+  // If we have the proper translation structure, use it
+  return [
+    {
+      id: 1,
+      name: t.mentors.profiles[0]?.name || "Grace",
+      title: t.mentors.profiles[0]?.title || "Pronunciation Trainer",
+      location: t.mentors.profiles[0]?.location || "London",
+      accent: t.mentors.profiles[0]?.accent || "British",
+      videoUrl: "https://www.youtube.com/embed/5NH3zCO9XvQ",
+      bio: t.mentors.profiles[0]?.bio || "Specializes in helping students master English pronunciation.",
+    },
+    {
+      id: 2,
+      name: t.mentors.profiles[1]?.name || "Emma",
+      title: t.mentors.profiles[1]?.title || "Accent Coach",
+      location: t.mentors.profiles[1]?.location || "Dublin",
+      accent: t.mentors.profiles[1]?.accent || "Irish",
+      videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
+      bio: t.mentors.profiles[1]?.bio || "Helps students develop natural-sounding speech patterns.",
+    },
+    {
+      id: 3,
+      name: t.mentors.profiles[2]?.name || "Floris",
+      title: t.mentors.profiles[2]?.title || "Grammar Expert",
+      location: t.mentors.profiles[2]?.location || "New York",
+      accent: t.mentors.profiles[2]?.accent || "American",
+      videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
+      bio: t.mentors.profiles[2]?.bio || "Makes complex grammar rules simple and intuitive.",
+    },
+    {
+      id: 4,
+      name: t.mentors.profiles[3]?.name || "Erin",
+      title: t.mentors.profiles[3]?.title || "Conversation Specialist",
+      location: t.mentors.profiles[3]?.location || "Toronto",
+      accent: t.mentors.profiles[3]?.accent || "Canadian",
+      videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
+      bio: t.mentors.profiles[3]?.bio || "Focuses on building fluency and confidence.",
+    },
+  ]
+}
 
 export function OurMentors() {
   const { language } = useLanguage()
@@ -111,7 +157,7 @@ export function OurMentors() {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="mentors">
       <div className="container-custom">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">{t.mentors.subtitle}</p>

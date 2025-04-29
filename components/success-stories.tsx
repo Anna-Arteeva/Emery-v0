@@ -21,44 +21,100 @@ type TestimonialVideo = {
   highlightColor: string
 }
 
-const getTestimonials = (t: any): TestimonialVideo[] => [
-  {
-    id: t.successStories.testimonials[0].id,
-    name: t.successStories.testimonials[0].name,
-    title: t.successStories.testimonials[0].title,
-    quote: t.successStories.testimonials[0].quote,
-    highlightedText: t.successStories.testimonials[0].highlightedText,
-    videoUrl: "https://media.emery.school/upload/Svitlana+9-16.mp4",
-    thumbnailUrl: "/testimonials/svitlana-preview.png",
-    backgroundColor: "#EBF5FF",
-    textColor: "#1E293B",
-    highlightColor: "#3B82F6",
-  },
-  {
-    id: t.successStories.testimonials[1].id,
-    name: t.successStories.testimonials[1].name,
-    title: t.successStories.testimonials[1].title,
-    quote: t.successStories.testimonials[1].quote,
-    highlightedText: t.successStories.testimonials[1].highlightedText,
-    videoUrl: "https://media.emery.school/upload/olga_p.mp4",
-    thumbnailUrl: "/testimonials/olga-preview.png",
-    backgroundColor: "#F3F0FF",
-    textColor: "#1E293B",
-    highlightColor: "#8B5CF6",
-  },
-  {
-    id: t.successStories.testimonials[2].id,
-    name: t.successStories.testimonials[2].name,
-    title: t.successStories.testimonials[2].title,
-    quote: t.successStories.testimonials[2].quote,
-    highlightedText: t.successStories.testimonials[2].highlightedText,
-    videoUrl: "https://media.emery.school/upload/myron_eng.mp4",
-    thumbnailUrl: "/testimonials/myron-preview.png",
-    backgroundColor: "#EBF5FF",
-    textColor: "#1E293B",
-    highlightColor: "#3B82F6",
-  },
-]
+// Replace the getTestimonials function with this improved version that handles missing translations
+const getTestimonials = (t: any): TestimonialVideo[] => {
+  // Check if the required translation structure exists
+  if (!t.successStories || !t.successStories.testimonials || !Array.isArray(t.successStories.testimonials)) {
+    // Fallback data if translations are missing
+    return [
+      {
+        id: "svitlana",
+        name: "Svitlana",
+        title: "University lecturer",
+        quote:
+          "The most valuable experience after the Emery Marathon is to realize that, only regularity gives results. After this marathon, I began to feel the necessity of a daily English portion.",
+        highlightedText: "only regularity gives results",
+        videoUrl: "https://media.emery.school/upload/Svitlana+9-16.mp4",
+        thumbnailUrl: "/testimonials/svitlana-preview.png",
+        backgroundColor: "#EBF5FF",
+        textColor: "#1E293B",
+        highlightColor: "#3B82F6",
+      },
+      {
+        id: "olga",
+        name: "Olga",
+        title: "Flight Attendant",
+        quote:
+          "The most fascinating feature that I enjoyed in Emery is the video dictionary. Here you can acquire numerous new words, and it is genuinely cool that they are elucidated by native speakers from Britain, Canada and America.",
+        highlightedText: "most fascinating feature that I enjoyed in Emery is the video dictionary",
+        videoUrl: "https://media.emery.school/upload/olga_p.mp4",
+        thumbnailUrl: "/testimonials/olga-preview.png",
+        backgroundColor: "#F3F0FF",
+        textColor: "#1E293B",
+        highlightColor: "#8B5CF6",
+      },
+      {
+        id: "myron",
+        name: "Myron",
+        title: "Software Developer",
+        quote:
+          "What I appreciate most about Emery is the structured approach to learning. The daily tasks and mentor feedback helped me improve my speaking skills dramatically in just a few weeks.",
+        highlightedText: "structured approach to learning",
+        videoUrl: "https://media.emery.school/upload/myron_eng.mp4",
+        thumbnailUrl: "/testimonials/myron-preview.png",
+        backgroundColor: "#EBF5FF",
+        textColor: "#1E293B",
+        highlightColor: "#3B82F6",
+      },
+    ]
+  }
+
+  // If we have the proper translation structure, use it with fallbacks
+  return [
+    {
+      id: t.successStories.testimonials[0]?.id || "svitlana",
+      name: t.successStories.testimonials[0]?.name || "Svitlana",
+      title: t.successStories.testimonials[0]?.title || "University lecturer",
+      quote:
+        t.successStories.testimonials[0]?.quote ||
+        "The most valuable experience after the Emery Marathon is to realize that, only regularity gives results.",
+      highlightedText: t.successStories.testimonials[0]?.highlightedText || "only regularity gives results",
+      videoUrl: "https://media.emery.school/upload/Svitlana+9-16.mp4",
+      thumbnailUrl: "/testimonials/svitlana-preview.png",
+      backgroundColor: "#EBF5FF",
+      textColor: "#1E293B",
+      highlightColor: "#3B82F6",
+    },
+    {
+      id: t.successStories.testimonials[1]?.id || "olga",
+      name: t.successStories.testimonials[1]?.name || "Olga",
+      title: t.successStories.testimonials[1]?.title || "Flight Attendant",
+      quote:
+        t.successStories.testimonials[1]?.quote ||
+        "The most fascinating feature that I enjoyed in Emery is the video dictionary.",
+      highlightedText: t.successStories.testimonials[1]?.highlightedText || "most fascinating feature",
+      videoUrl: "https://media.emery.school/upload/olga_p.mp4",
+      thumbnailUrl: "/testimonials/olga-preview.png",
+      backgroundColor: "#F3F0FF",
+      textColor: "#1E293B",
+      highlightColor: "#8B5CF6",
+    },
+    {
+      id: t.successStories.testimonials[2]?.id || "myron",
+      name: t.successStories.testimonials[2]?.name || "Myron",
+      title: t.successStories.testimonials[2]?.title || "Software Developer",
+      quote:
+        t.successStories.testimonials[2]?.quote ||
+        "What I appreciate most about Emery is the structured approach to learning.",
+      highlightedText: t.successStories.testimonials[2]?.highlightedText || "structured approach to learning",
+      videoUrl: "https://media.emery.school/upload/myron_eng.mp4",
+      thumbnailUrl: "/testimonials/myron-preview.png",
+      backgroundColor: "#EBF5FF",
+      textColor: "#1E293B",
+      highlightColor: "#3B82F6",
+    },
+  ]
+}
 
 export function SuccessStories() {
   const { language } = useLanguage()
@@ -146,7 +202,7 @@ export function SuccessStories() {
   }
 
   return (
-    <section className="pt-20 pb-40">
+    <section className="pt-20 pb-40" id="testimonials">
       <div className="container-custom">
         <div className="text-center mb-28">
           <p className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">{t.successStories.subtitle}</p>

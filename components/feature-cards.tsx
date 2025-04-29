@@ -29,23 +29,66 @@ export function FeatureCards() {
     return imageNames[index] || "placeholder"
   }
 
-  const features = t.features.items.map((item, index) => ({
-    icon: featureIcons[index], // You'll need to keep your icons array separate
-    title: item.title,
-    description: item.description,
-    image: `/features/${getFeatureImageName(index)}.png`, // Helper function to map index to image name
+  // Safely access features with fallbacks
+  const features = (t.features?.items || []).map((item, index) => ({
+    icon: featureIcons[index % featureIcons.length], // Use modulo to prevent out-of-bounds
+    title: item?.title || `Feature ${index + 1}`,
+    description: item?.description || "Description not available in this language",
+    image: `/features/${getFeatureImageName(index)}.png`,
   }))
+
+  // If no features are available, use fallback data
+  const fallbackFeatures =
+    features.length > 0
+      ? features
+      : [
+          {
+            icon: featureIcons[0],
+            title: "Structured course",
+            description: "Balanced grammar, comprehension, speaking, vocabulary, like in a top language school",
+            image: "/features/structured-course.png",
+          },
+          {
+            icon: featureIcons[1],
+            title: "Video lessons",
+            description: "Learn with engaging and authentic content created by native speakers",
+            image: "/features/video-lessons.png",
+          },
+          {
+            icon: featureIcons[2],
+            title: "Immersive vocabulary",
+            description: "Different topics, new vocabulary, grammar, and interactive excursuses",
+            image: "/features/immersive-vocabulary.png",
+          },
+          {
+            icon: featureIcons[3],
+            title: "Human mentor",
+            description: "Get personal support while you progress through your learning journey",
+            image: "/features/human-mentor.png",
+          },
+          {
+            icon: featureIcons[4],
+            title: "Real speaking practice",
+            description: "Build speaking confidence in a safe, non-judgmental space",
+            image: "/features/speaking-practice.png",
+          },
+        ]
 
   return (
     <section className="py-20 bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t.featureCards.headline}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t.featureCards.subheading}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {t.featureCards?.headline || "How Emery helps you learn"}
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            {t.featureCards?.subheading ||
+              "Our comprehensive approach combines the best learning methods with human support"}
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {features.map((feature, index) => (
+          {fallbackFeatures.map((feature, index) => (
             <div key={index} className="flex flex-col items-start">
               <div className="mb-6 relative w-full aspect-video rounded-xl overflow-hidden">
                 <Image src={feature.image || "/placeholder.svg"} alt={feature.title} fill className="object-cover" />

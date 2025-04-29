@@ -21,45 +21,62 @@ export function Header() {
 
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#features" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-              {t.nav.features}
-            </Link>
             <Link href="#how-it-works" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
               {t.nav.howItWorks}
             </Link>
-            <Link href="#pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-              {t.nav.pricing}
+            <Link href="#mentors" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              {t.nav.mentors}
+            </Link>
+            <Link href="#testimonials" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              {t.nav.testimonials}
+            </Link>
+            <Link href="#faq" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              {t.nav.faq}
             </Link>
           </nav>
 
           <div className="flex items-center gap-4 relative z-50">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center gap-1 text-gray-600">
+                <Button variant="ghost" size="sm" className="flex items-center gap-1.5 text-gray-600 px-3 py-2 h-9">
                   <Globe className="h-4 w-4" />
-                  <span className="uppercase text-xs">{language}</span>
-                  <ChevronDown className="h-3 w-3" />
+                  <span className="uppercase text-xs font-medium">{language}</span>
+                  <ChevronDown className="h-3 w-3 opacity-70" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="z-50">
-                <DropdownMenuItem onClick={() => setLanguage("en")} className="text-sm">
+              <DropdownMenuContent align="end" className="z-50 min-w-[120px]">
+                <DropdownMenuItem
+                  onClick={() => setLanguage("en")}
+                  className={`text-sm py-2 ${language === "en" ? "bg-gray-50 font-medium" : ""}`}
+                >
                   English
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("de")} className="text-sm">
+                <DropdownMenuItem
+                  onClick={() => setLanguage("de")}
+                  className={`text-sm py-2 ${language === "de" ? "bg-gray-50 font-medium" : ""}`}
+                >
                   Deutsch
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("ru")} className="text-sm">
+                <DropdownMenuItem
+                  onClick={() => setLanguage("ru")}
+                  className={`text-sm py-2 ${language === "ru" ? "bg-gray-50 font-medium" : ""}`}
+                >
                   Русский
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("fr")} className="text-sm">
+                <DropdownMenuItem
+                  onClick={() => setLanguage("fr")}
+                  className={`text-sm py-2 ${language === "fr" ? "bg-gray-50 font-medium" : ""}`}
+                >
                   Français
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button variant="outline" size="sm" className="text-sm font-medium">
-              {t.nav.login}
-            </Button>
+            <a href="https://app.emeryenglish.com/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="text-sm font-medium">
+                {t.nav.login}
+              </Button>
+            </a>
           </div>
         </div>
       </div>
