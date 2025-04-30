@@ -30,12 +30,15 @@ export function Header() {
             <Link href="#testimonials" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
               {t.nav.testimonials}
             </Link>
+            <Link href="/pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              {t.nav.pricing}
+            </Link>
             <Link href="#faq" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
               {t.nav.faq}
             </Link>
           </nav>
 
-          <div className="flex items-center gap-4 relative z-50">
+          <div className="flex items-center gap-4 relative z-[100]">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="flex items-center gap-1.5 text-gray-600 px-3 py-2 h-9">

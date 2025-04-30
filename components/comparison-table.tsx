@@ -102,7 +102,7 @@ export function ComparisonTable() {
           <div className="bg-white rounded-xl shadow-sm overflow-hidden">
             <div className="p-6 flex justify-center">
               <div className="w-16 h-16 flex items-center justify-center">
-                <span className="text-gray-800 font-bold">Teacher</span>
+                <span className="text-gray-800 font-bold">{t.common?.englishTeacher || "Teacher"}</span>
               </div>
             </div>
             <div className="px-6 pb-6 space-y-4">
@@ -148,7 +148,7 @@ export function ComparisonTable() {
           <div className="bg-white rounded-xl shadow-sm overflow-hidden">
             <div className="p-6 flex justify-center">
               <div className="w-16 h-16 flex items-center justify-center">
-                <span className="text-gray-800 font-bold">Other App</span>
+                <span className="text-gray-800 font-bold">{t.common?.otherApps || "Other App"}</span>
               </div>
             </div>
             <div className="px-6 pb-6 space-y-4">
@@ -194,7 +194,7 @@ export function ComparisonTable() {
         {/* Desktop comparison table - hidden on small screens */}
         <div className="hidden md:block max-w-5xl mx-auto">
           {/* Table headers with logos */}
-          <div className="grid grid-cols-4 mb-8">
+          <div className="grid grid-cols-4 mb-8 pl-8">
             <div className="col-span-1"></div>
             <div className="col-span-1 flex justify-center">
               <div className="w-20 h-20 flex items-center justify-center">
@@ -202,21 +202,13 @@ export function ComparisonTable() {
               </div>
             </div>
             <div className="col-span-1 flex justify-center text-center">
-              <div className="w-20 h-20 flex flex-col items-center justify-center">
-                <span className="text-gray-800 font-bold text-lg">
-                  English
-                  <br />
-                  Teacher
-                </span>
+              <div className="flex flex-col items-center justify-center">
+                <span className="text-gray-800 font-bold text-lg">{t.common?.englishTeacher || "English Teacher"}</span>
               </div>
             </div>
             <div className="col-span-1 flex justify-center text-center">
-              <div className="w-20 h-20 flex flex-col items-center justify-center">
-                <span className="text-gray-800 font-bold text-lg">
-                  Other
-                  <br />
-                  Apps
-                </span>
+              <div className="flex flex-col items-center justify-center">
+                <span className="text-gray-800 font-bold text-lg">{t.common?.otherApps || "Other Apps"}</span>
               </div>
             </div>
           </div>

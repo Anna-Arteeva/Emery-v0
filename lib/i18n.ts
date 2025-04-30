@@ -283,6 +283,85 @@ export const translations = {
       headline: "Are you ready to take your English to the next level?",
       cta: "Get Started",
     },
+    common: {
+      appStoreReview: "App Store review 2023",
+      englishTeacher: "English Teacher",
+      otherApps: "Other Apps",
+    },
+    pricing: {
+      title: "Choose Your English Learning Journey",
+      subtitle:
+        "Flexible plans designed to fit your learning style, schedule, and budget—all with human support included",
+      featuresTitle: "What All Plans Include",
+      featureItems: [
+        {
+          title: "Video-based Learning",
+          description: "Learn with engaging content from native speakers across different accents and contexts",
+        },
+        {
+          title: "Human Mentorship",
+          description: "Get personalized guidance and feedback from experienced language mentors",
+        },
+        {
+          title: "Immersive Audio",
+          description: "Train your ear with authentic conversations and pronunciation exercises",
+        },
+        {
+          title: "Community Practice",
+          description: "Join conversation groups to practice with peers in a supportive environment",
+        },
+      ],
+      monthlyBilling: "Monthly Billing",
+      annualBilling: "Annual Billing",
+      annualDiscount: "Save 20%",
+      mostPopular: "Most Popular",
+      perMonth: "/ month",
+      choose: "Choose",
+      guarantee: {
+        title: "30-Day Satisfaction Guarantee",
+        description:
+          "If you're not completely satisfied with your Emery experience within the first 30 days, we'll refund your payment in full—no questions asked.",
+        contact: "Have questions? Contact us at",
+        email: "support@emeryenglish.com",
+      },
+      legalText: "By subscribing to Emery, you agree to the Terms of Service and Privacy Policy.",
+      plans: {
+        basic: {
+          name: "Basic",
+          description: "Perfect for casual learners",
+          features: [
+            "Structured learning path",
+            "300+ unique video lessons",
+            "Basic grammar exercises",
+            "Limited mentor chat support",
+          ],
+        },
+        premium: {
+          name: "Premium",
+          description: "Our most popular plan",
+          features: [
+            "Everything in Basic",
+            "Unlimited video lessons",
+            "Advanced grammar exercises",
+            "Priority mentor support",
+            "1 monthly private lesson",
+            "Speaking practice with feedback",
+          ],
+        },
+        ultimate: {
+          name: "Ultimate",
+          description: "For serious language learners",
+          features: [
+            "Everything in Premium",
+            "Weekly private lessons",
+            "Customized learning path",
+            "24/7 mentor availability",
+            "Personal progress tracking",
+            "Native speaker conversation practice",
+          ],
+        },
+      },
+    },
   },
   de: {
     nav: {
@@ -357,7 +436,7 @@ export const translations = {
         },
         {
           title: "Menschliche Mentor-Unterstützung",
-          description: "Erhalte pers��nliche Unterstützung während deines Lernfortschritts",
+          description: "Erhalte persnliche Unterstützung während deines Lernfortschritts",
         },
         {
           title: "Sprechpraxis",
@@ -566,6 +645,11 @@ export const translations = {
       headline: "Bist du bereit, dein Englisch auf die nächste Stufe zu bringen?",
       cta: "Jetzt starten",
     },
+    common: {
+      appStoreReview: "App Store Bewertung 2023",
+      englishTeacher: "Englischlehrer",
+      otherApps: "Andere Apps",
+    },
   },
   ru: {
     nav: {
@@ -585,7 +669,7 @@ export const translations = {
       subHeading: "",
       intro:
         "Системный подход, реальная практика и поддержка наставника – для тех, кто пробовал другие методы, но хочет реального прогресса.",
-      cta: "Начать",
+      cta: "Начать обучение",
       caption: "Первый урок за наш счет",
       mentorBubble: "Получите помощь, когда она вам нужна!",
     },
@@ -606,7 +690,7 @@ export const translations = {
         "Сбалансированная грамматика, понимание, разговорная речь, словарный запас",
         "Увлекательный видеоконтент от носителей языка",
         "Персонализированный путь обучения на основе вашего уровня",
-        "Интерактивные упражнения для практики и обратной связи",
+        "нтерактивные упражнения для практики и обратной связи",
       ],
       practiceTitle: "Практикуйтесь в реальных сценариях",
       practiceSubtitle: "Применяйте то, что вы изучаете, в аутентичных контекстах",
@@ -732,7 +816,8 @@ export const translations = {
     },
     comparison: {
       title: "Как Emery выделяется среди других подходов к изучению языков?",
-      subtitle: "В чём разница между Emery, классическими учителями английского и другими приложениями для изучения языков?",
+      subtitle:
+        "В чём разница между Emery, классическими учителями английского и другими приложениями для изучения языков?",
       features: [
         {
           name: "Цена",
@@ -850,7 +935,12 @@ export const translations = {
     },
     callToAction: {
       headline: "Вы готовы поднять свой английский на новый уровень?",
-      cta: "Начать",
+      cta: "Начать обучение",
+    },
+    common: {
+      appStoreReview: "Отзыв из App Store 2023",
+      englishTeacher: "Учитель английского",
+      otherApps: "Другие приложения",
     },
   },
   fr: {
@@ -1139,6 +1229,11 @@ export const translations = {
     callToAction: {
       headline: "Êtes-vous prêt à faire passer votre anglais au niveau supérieur ?",
       cta: "Commencer",
+    },
+    common: {
+      appStoreReview: "Avis App Store 2023",
+      englishTeacher: "Professeur d'anglais",
+      otherApps: "Autres applications",
     },
   },
 }

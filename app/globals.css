@@ -802,13 +802,13 @@ h6 {
 }
 
 /* Add this at the end of your globals.css file */
-.shadcn-dropdown-content {
-  z-index: 50 !important;
+/* Ensure dropdown menus are always on top */
+[data-radix-popper-content-wrapper] {
+  z-index: 100 !important;
 }
 
-/* Ensure the dropdown menu is always on top */
-[data-radix-popper-content-wrapper] {
-  z-index: 50 !important;
+.shadcn-dropdown-content {
+  z-index: 100 !important;
 }
 
 /* Language switcher styles */
