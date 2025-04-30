@@ -72,6 +72,12 @@ export function Header() {
                 >
                   Français
                 </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setLanguage("uk")}
+                  className={`text-sm py-2 ${language === "uk" ? "bg-gray-50 font-medium" : ""}`}
+                >
+                  Українська
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 

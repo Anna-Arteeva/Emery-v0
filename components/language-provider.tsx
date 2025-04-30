@@ -4,7 +4,7 @@ import type React from "react"
 
 import { createContext, useContext, useEffect, useState } from "react"
 
-type Language = "en" | "de" | "ru" | "fr"
+type Language = "en" | "de" | "ru" | "fr" | "uk"
 type LanguageContextType = {
   language: Language
   setLanguage: (lang: Language) => void
@@ -28,7 +28,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       // First check for stored language preference
       const storedLang = localStorage.getItem("language") as Language | null
 
-      if (storedLang && (storedLang === "en" || storedLang === "de" || storedLang === "ru" || storedLang === "fr")) {
+      if (
+        storedLang &&
+        (storedLang === "en" ||
+          storedLang === "de" ||
+          storedLang === "ru" ||
+          storedLang === "fr" ||
+          storedLang === "uk")
+      ) {
         setLanguage(storedLang)
         document.documentElement.lang = storedLang
         return
@@ -45,6 +52,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       } else if (browserLang === "fr") {
         setLanguage("fr")
         document.documentElement.lang = "fr"
+      } else if (browserLang === "uk") {
+        setLanguage("uk")
+        document.documentElement.lang = "uk"
       }
     }
 
@@ -54,7 +64,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const handleStorageChange = (event: StorageEvent) => {
       if (event.key === "language") {
         const newLang = event.newValue as Language
-        if (newLang && (newLang === "en" || newLang === "de" || newLang === "ru" || newLang === "fr")) {
+        if (
+          newLang &&
+          (newLang === "en" || newLang === "de" || newLang === "ru" || newLang === "fr" || newLang === "uk")
+        ) {
           setLanguage(newLang)
           document.documentElement.lang = newLang
         }
