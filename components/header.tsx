@@ -30,9 +30,14 @@ export function Header() {
             <Link href="#testimonials" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
               {t.nav.testimonials}
             </Link>
-            <Link href="/pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+            <a
+              href="https://app.emeryenglish.com/plans"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 text-sm font-medium"
+            >
               {t.nav.pricing}
-            </Link>
+            </a>
             <Link href="#faq" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
               {t.nav.faq}
             </Link>
