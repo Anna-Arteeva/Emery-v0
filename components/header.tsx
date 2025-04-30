@@ -47,7 +47,7 @@ export function Header() {
                   <ChevronDown className="h-3 w-3 opacity-70" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="z-50 min-w-[120px]">
+              <DropdownMenuContent align="end" className="z-50 min-w-[120px] bg-white">
                 <DropdownMenuItem
                   onClick={() => setLanguage("en")}
                   className={`text-sm py-2 ${language === "en" ? "bg-gray-50 font-medium" : ""}`}

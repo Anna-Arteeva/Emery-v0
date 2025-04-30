@@ -292,7 +292,7 @@ export const translations = {
       title: "Choose Your English Learning Journey",
       subtitle:
         "Flexible plans designed to fit your learning style, schedule, and budget—all with human support included",
-      featuresTitle: "What All Plans Include",
+      featuresTitle: "All Plans Include",
       featureItems: [
         {
           title: "Video-based Learning",
@@ -311,12 +311,16 @@ export const translations = {
           description: "Join conversation groups to practice with peers in a supportive environment",
         },
       ],
-      monthlyBilling: "Monthly Billing",
+      monthlyBilling: "Months",
       annualBilling: "Annual Billing",
       annualDiscount: "Save 20%",
-      mostPopular: "Most Popular",
+      mostPopular: "BEST VALUE",
+      saveToday: "Save 100€ Today",
+      lifetime: "Lifetime",
+      getLifetime: "GET LIFETIME ACCESS",
+      oneTimePayment: "One time payment",
       perMonth: "/ month",
-      choose: "Choose",
+      choose: "Subscribe now",
       guarantee: {
         title: "30-Day Satisfaction Guarantee",
         description:
@@ -349,10 +353,10 @@ export const translations = {
           ],
         },
         ultimate: {
-          name: "Ultimate",
+          name: "Lifetime",
           description: "For serious language learners",
           features: [
-            "Everything in Premium",
+            "Lifetime access to all content",
             "Weekly private lessons",
             "Customized learning path",
             "24/7 mentor availability",
@@ -650,6 +654,84 @@ export const translations = {
       englishTeacher: "Englischlehrer",
       otherApps: "Andere Apps",
     },
+    pricing: {
+      title: "Wählen Sie Ihren Lernweg für Englisch",
+      subtitle: "Flexible Pläne für Ihren Lernstil, Zeitplan und Budget — immer mit menschlicher Unterstützung",
+      featuresTitle: "Alle Pläne beinhalten",
+      featureItems: [
+        {
+          title: "Videobasiertes Lernen",
+          description: "Lernen Sie mit fesselnden Inhalten von Muttersprachlern verschiedener Akzente und Kontexte",
+        },
+        {
+          title: "Menschliche Mentorschaft",
+          description: "Erhalten Sie persönliche Anleitung und Feedback von erfahrenen Sprachmentoren",
+        },
+        {
+          title: "Immersives Audio",
+          description: "Trainieren Sie Ihr Gehör mit authentischen Gesprächen und Ausspracheübungen",
+        },
+        {
+          title: "Gemeinschaftspraxis",
+          description:
+            "Nehmen Sie an Konversationsgruppen teil, um mit Gleichgesinnten in einer unterstützenden Umgebung zu üben",
+        },
+      ],
+      monthlyBilling: "Monate",
+      annualBilling: "Jährliche Abrechnung",
+      annualDiscount: "20% sparen",
+      mostPopular: "BESTE WAHL",
+      saveToday: "Heute 100€ sparen",
+      lifetime: "Lebenslang",
+      getLifetime: "LEBENSLANGEN ZUGANG ERHALTEN",
+      oneTimePayment: "Einmalige Zahlung",
+      perMonth: "/ Monat",
+      choose: "Jetzt abonnieren",
+      guarantee: {
+        title: "30-Tage Zufriedenheitsgarantie",
+        description:
+          "Wenn Sie innerhalb der ersten 30 Tage mit Ihrer Emery-Erfahrung nicht vollständig zufrieden sind, erstatten wir Ihre Zahlung vollständig — ohne Fragen zu stellen.",
+        contact: "Haben Sie Fragen? Kontaktieren Sie uns unter",
+        email: "support@emeryenglish.com",
+      },
+      legalText: "Durch das Abonnieren von Emery stimmen Sie den Nutzungsbedingungen und der Datenschutzrichtlinie zu.",
+      plans: {
+        basic: {
+          name: "Basis",
+          description: "Perfekt für Gelegenheitslerner",
+          features: [
+            "Strukturierter Lernpfad",
+            "Über 300 einzigartige Videolektionen",
+            "Grundlegende Grammatikübungen",
+            "Begrenzte Mentor-Chat-Unterstützung",
+          ],
+        },
+        premium: {
+          name: "Premium",
+          description: "Unser beliebtester Plan",
+          features: [
+            "Alles im Basisplan",
+            "Unbegrenzte Videolektionen",
+            "Fortgeschrittene Grammatikübungen",
+            "Prioritäts-Mentorunterstützung",
+            "1 monatliche Privatstunde",
+            "Sprechpraxis mit Feedback",
+          ],
+        },
+        ultimate: {
+          name: "Lebenslang",
+          description: "Für ernsthafte Sprachlerner",
+          features: [
+            "Lebenslanger Zugang zu allen Inhalten",
+            "Wöchentliche Privatstunden",
+            "Angepasster Lernpfad",
+            "24/7 Mentor-Verfügbarkeit",
+            "Persönliche Fortschrittsverfolgung",
+            "Konversationspraxis mit Muttersprachlern",
+          ],
+        },
+      },
+    },
   },
   ru: {
     nav: {
@@ -941,6 +1023,85 @@ export const translations = {
       appStoreReview: "Отзыв из App Store 2023",
       englishTeacher: "Учитель английского",
       otherApps: "Другие приложения",
+    },
+    pricing: {
+      title: "Ваш путь в совершенному английскому",
+      subtitle:
+        "Гибкие планы, которые подстраиваются под ваш стиль обучения, график и бюджет - и всегда с поддержкой наставника.",
+      featuresTitle: "Все планы включают в себя",
+      featureItems: [
+        {
+          title: "Видео уроки",
+          description:
+            "Учитесь с интересным и разнообразными видео от носителей языка, которые говорят с разными акцентами и в различных жизненных ситуациях.",
+        },
+        {
+          title: "Наставничество",
+          description: "Регулярная персональная поддержка с наставником",
+        },
+        {
+          title: "Лексика через погружение",
+          description: "Тренируйте восприятие на слух с помощью живых диалогов и упражнений на произношениею",
+        },
+        {
+          title: "Практика в сообществе",
+          description: "Практикуйте разговорный английский в группах с другими участниками, где всегда поддержат и помогут.",
+        },
+      ],
+      monthlyBilling: "Месяцев",
+      annualBilling: "Годовой тариф",
+      annualDiscount: "Экономия 20%",
+      mostPopular: "ЛУЧШИЙ ВЫБОР",
+      saveToday: "Сэкономьте 100€ сегодня",
+      lifetime: "Пожизненно",
+      getLifetime: "ПОЛУЧИТЬ ПОЖИЗНЕННЫЙ ДОСТУП",
+      oneTimePayment: "Единоразовый платеж",
+      perMonth: "/ месяц",
+      choose: "Подписаться сейчас",
+      guarantee: {
+        title: "30-дневная гарантия",
+        description:
+          "Если в течение первых 30 дней использования Emery вы останетесь недовольны, мы полностью вернем вам деньги, без лишних формальностей.",
+        contact: "Есть вопросы? Свяжитесь с нами:",
+        email: "support@emeryenglish.com",
+      },
+      legalText: "Подписываясь на Emery, вы соглашаетесь с Условиями использования и Политикой конфиденциальности.",
+      plans: {
+        basic: {
+          name: "Базовый",
+          description: "Идеально для нерегулярного обучения",
+          features: [
+            "Структурированный путь обучения",
+            "Более 300 уникальных видеоуроков",
+            "Базовые упражнения по грамматике",
+            "Ограниченная поддержка наставника в чате",
+          ],
+        },
+        premium: {
+          name: "Премиум",
+          description: "Наш самый популярный план",
+          features: [
+            "Все, что включено в Базовый план",
+            "Неограниченные видеоуроки",
+            "Продвинутые упражнения по грамматике",
+            "Приоритетная поддержка наставника",
+            "1 индивидуальный урок в месяц",
+            "Разговорная практика с обратной связью",
+          ],
+        },
+        ultimate: {
+          name: "Пожизненный",
+          description: "Для серьезно настроенных изучающих язык",
+          features: [
+            "Пожизненный доступ ко всему контенту",
+            "Еженедельные индивидуальные уроки",
+            "Индивидуальный путь обучения",
+            "Доступность наставника 24/7",
+            "Отслеживание индивидуального прогресса",
+            "Разговорная практика с носителями языка",
+          ],
+        },
+      },
     },
   },
   fr: {
@@ -1234,6 +1395,87 @@ export const translations = {
       appStoreReview: "Avis App Store 2023",
       englishTeacher: "Professeur d'anglais",
       otherApps: "Autres applications",
+    },
+    pricing: {
+      title: "Choisissez votre parcours d'apprentissage de l'anglais",
+      subtitle:
+        "Des forfaits flexibles conçus pour s'adapter à votre style d'apprentissage, à votre emploi du temps et à votre budget — toujours avec un soutien humain",
+      featuresTitle: "Tous les forfaits incluent",
+      featureItems: [
+        {
+          title: "Apprentissage par vidéo",
+          description: "Apprenez avec du contenu captivant de locuteurs natifs aux différents accents et contextes",
+        },
+        {
+          title: "Mentorat humain",
+          description:
+            "Obtenez des conseils personnalisés et des retours d'expérience de mentors linguistiques expérimentés",
+        },
+        {
+          title: "Audio immersif",
+          description: "Entraînez votre oreille avec des conversations authentiques et des exercices de prononciation",
+        },
+        {
+          title: "Pratique communautaire",
+          description:
+            "Rejoignez des groupes de conversation pour pratiquer avec des pairs dans un environnement bienveillant",
+        },
+      ],
+      monthlyBilling: "Mois",
+      annualBilling: "Facturation annuelle",
+      annualDiscount: "Économisez 20%",
+      mostPopular: "MEILLEURE VALEUR",
+      saveToday: "Économisez 100€ aujourd'hui",
+      lifetime: "À vie",
+      getLifetime: "OBTENIR UN ACCÈS À VIE",
+      oneTimePayment: "Paiement unique",
+      perMonth: "/ mois",
+      choose: "S'abonner maintenant",
+      guarantee: {
+        title: "Garantie de satisfaction de 30 jours",
+        description:
+          "Si vous n'êtes pas entièrement satisfait de votre expérience Emery dans les 30 premiers jours, nous vous rembourserons intégralement — sans poser de questions.",
+        contact: "Des questions? Contactez-nous à",
+        email: "support@emeryenglish.com",
+      },
+      legalText:
+        "En vous abonnant à Emery, vous acceptez les Conditions d'utilisation et la Politique de confidentialité.",
+      plans: {
+        basic: {
+          name: "Basique",
+          description: "Parfait pour les apprenants occasionnels",
+          features: [
+            "Parcours d'apprentissage structuré",
+            "Plus de 300 leçons vidéo uniques",
+            "Exercices de grammaire de base",
+            "Support de mentor par chat limité",
+          ],
+        },
+        premium: {
+          name: "Premium",
+          description: "Notre forfait le plus populaire",
+          features: [
+            "Tout ce qui est inclus dans le forfait Basique",
+            "Leçons vidéo illimitées",
+            "Exercices de grammaire avancés",
+            "Support mentor prioritaire",
+            "1 leçon privée mensuelle",
+            "Pratique orale avec retour d'expérience",
+          ],
+        },
+        ultimate: {
+          name: "À vie",
+          description: "Pour les apprenants de langue sérieux",
+          features: [
+            "Accès à vie à tout le contenu",
+            "Leçons privées hebdomadaires",
+            "Parcours d'apprentissage personnalisé",
+            "Disponibilité du mentor 24/7",
+            "Suivi des progrès personnels",
+            "Pratique de conversation avec des locuteurs natifs",
+          ],
+        },
+      },
     },
   },
 }
