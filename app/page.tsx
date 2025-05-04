@@ -15,8 +15,8 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col">
       <Header />
       <div className="flex-grow">
-        <Hero />
         <WhyItWorks />
+        <Hero />
         <FeatureSectionsStacked />
         <EducationalVideos />
         <OurMentors />
