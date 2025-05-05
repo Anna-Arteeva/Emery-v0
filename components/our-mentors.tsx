@@ -23,11 +23,11 @@ const getMentorData = (t: any) => {
       },
       {
         id: 2,
-        name: "Emma",
+        name: "Nick",
         title: "Accent Coach",
         location: "Dublin",
         accent: "Irish",
-        videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
+        videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
         bio: "Helps students develop natural-sounding speech patterns and rhythm in their English conversations.",
       },
       {
@@ -45,7 +45,7 @@ const getMentorData = (t: any) => {
         title: "Conversation Specialist",
         location: "Toronto",
         accent: "Canadian",
-        videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
+        videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
         bio: "Focuses on building fluency and confidence through engaging, real-world conversation practice.",
       },
     ]
@@ -64,11 +64,11 @@ const getMentorData = (t: any) => {
     },
     {
       id: 2,
-      name: t.mentors.profiles[1]?.name || "Emma",
+      name: t.mentors.profiles[1]?.name || "Nick",
       title: t.mentors.profiles[1]?.title || "Accent Coach",
       location: t.mentors.profiles[1]?.location || "Dublin",
       accent: t.mentors.profiles[1]?.accent || "Irish",
-      videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
+      videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
       bio: "Helps students develop natural-sounding speech patterns.",
     },
     {
@@ -86,7 +86,7 @@ const getMentorData = (t: any) => {
       title: t.mentors.profiles[3]?.title || "Conversation Specialist",
       location: t.mentors.profiles[3]?.location || "Toronto",
       accent: t.mentors.profiles[3]?.accent || "Canadian",
-      videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
+      videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
       bio: "Focuses on building fluency and confidence.",
     },
   ]

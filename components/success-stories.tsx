@@ -226,14 +226,14 @@ export function SuccessStories() {
                       {/* Inner container with padding */}
                       <div className="absolute inset-0 rounded-[32px] overflow-hidden bg-gray-900 flex items-center justify-center">
                         {/* Video container with reduced size */}
-                        <div className="relative w-[90%] h-[90%] rounded-lg overflow-hidden">
+                        <div className="relative w-[90%] h-[90%] rounded-lg overflow-hidden bg-gray-900">
                           {/* Thumbnail image that's always visible when video is not active */}
                           {activeVideo !== testimonial.id && (
                             <Image
                               src={testimonial.thumbnailUrl || "/placeholder.svg"}
                               alt={`${testimonial.name} video preview`}
                               fill
-                              className="object-cover z-10"
+                              className="object-contain z-10"
                               priority
                             />
                           )}
@@ -243,7 +243,7 @@ export function SuccessStories() {
                             ref={(el) => (videoRefs.current[testimonial.id] = el)}
                             src={testimonial.videoUrl}
                             poster={testimonial.thumbnailUrl}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             onEnded={handleVideoEnded}
                             onTimeUpdate={() => handleTimeUpdate(testimonial.id)}
                             onLoadedMetadata={() => handleLoadedMetadata(testimonial.id)}
