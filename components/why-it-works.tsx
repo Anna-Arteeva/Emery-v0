@@ -27,7 +27,7 @@ export function WhyItWorks() {
               <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-gray-200">
                 <Image
                   src="/testimonials/vera-fokina.png"
-                  alt={language === "ru" ? "Вера Фокина" : "Vera Fokina"}
+                  alt={language === "ru" ? "Ольга Лещук" : "Olga Leschuk"}
                   width={80}
                   height={80}
                   className="w-full h-full object-cover"
@@ -37,9 +37,8 @@ export function WhyItWorks() {
 
             {/* Attribution moved above the quote */}
             <div className="mb-8">
-              <p className="font-bold text-xl mb-1">{language === "ru" ? "Вера Фокина" : "Vera Fokina"}</p>
+              <p className="font-bold text-xl mb-1">{language === "ru" ? "Ольга Лещук" : "Olga Leschuk"}</p>
               <p className="text-gray-800 mb-1">{t.whyItWorks.testimonialLocation}</p>
-              <p className="text-gray-500 text-sm">{t.common?.appStoreReview || "App Store review 2023"}</p>
             </div>
 
             {/* Testimonial quote with updated typography */}

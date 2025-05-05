@@ -2,7 +2,7 @@
 
 import { useLanguage } from "./language-provider"
 import { translations } from "@/lib/i18n"
-import { MapPin, Play, Pause } from "lucide-react"
+import { MapPin } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 import { FlagIcon } from "./flag-icon"
 
@@ -69,7 +69,7 @@ const getMentorData = (t: any) => {
       location: t.mentors.profiles[1]?.location || "Dublin",
       accent: t.mentors.profiles[1]?.accent || "Irish",
       videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
-      bio: t.mentors.profiles[1]?.bio || "Helps students develop natural-sounding speech patterns.",
+      bio: "Helps students develop natural-sounding speech patterns.",
     },
     {
       id: 3,
@@ -78,7 +78,7 @@ const getMentorData = (t: any) => {
       location: t.mentors.profiles[2]?.location || "New York",
       accent: t.mentors.profiles[2]?.accent || "American",
       videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
-      bio: t.mentors.profiles[2]?.bio || "Makes complex grammar rules simple and intuitive.",
+      bio: "Makes complex grammar rules simple and intuitive.",
     },
     {
       id: 4,
@@ -87,7 +87,7 @@ const getMentorData = (t: any) => {
       location: t.mentors.profiles[3]?.location || "Toronto",
       accent: t.mentors.profiles[3]?.accent || "Canadian",
       videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
-      bio: t.mentors.profiles[3]?.bio || "Focuses on building fluency and confidence.",
+      bio: "Focuses on building fluency and confidence.",
     },
   ]
 }
@@ -189,19 +189,13 @@ export function OurMentors() {
                   />
                 </div>
 
-                {/* Play button overlay */}
+                {/* Clickable overlay without visible play button */}
                 <div
-                  className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors"
+                  className="absolute inset-0 cursor-pointer"
                   style={{ borderRadius: "50% 50% 50% 0" }}
                   onClick={() => handleVideoClick(mentor.id)}
                 >
-                  <div className="w-16 h-16 rounded-full bg-white/80 flex items-center justify-center">
-                    {isPlaying[mentor.id] ? (
-                      <Pause className="w-8 h-8 text-gray-800" />
-                    ) : (
-                      <Play className="w-8 h-8 text-gray-800 ml-1" />
-                    )}
-                  </div>
+                  {/* No visible play button */}
                 </div>
               </div>
 

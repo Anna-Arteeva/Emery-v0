@@ -223,10 +223,10 @@ export function SuccessStories() {
                   <div className="relative w-[280px] max-w-full">
                     {/* Phone frame */}
                     <div className="relative rounded-[40px] overflow-hidden border-8 border-black bg-black shadow-xl aspect-[9/19.5]">
-                      {/* Video */}
-                      <div className="absolute inset-0 rounded-[32px] overflow-hidden">
-                        {/* Video element with poster/thumbnail */}
-                        <div className="relative w-full h-full">
+                      {/* Inner container with padding */}
+                      <div className="absolute inset-0 rounded-[32px] overflow-hidden bg-gray-900 flex items-center justify-center">
+                        {/* Video container with reduced size */}
+                        <div className="relative w-[90%] h-[90%] rounded-lg overflow-hidden">
                           {/* Thumbnail image that's always visible when video is not active */}
                           {activeVideo !== testimonial.id && (
                             <Image
@@ -256,8 +256,8 @@ export function SuccessStories() {
                               className="absolute inset-0 flex items-center justify-center bg-black/20 z-20 cursor-pointer"
                               onClick={() => handleVideoClick(testimonial.id)}
                             >
-                              <div className="w-16 h-16 rounded-full bg-white/80 flex items-center justify-center">
-                                <Play className="w-8 h-8 text-gray-800 ml-1" />
+                              <div className="w-12 h-12 rounded-full bg-white/80 flex items-center justify-center">
+                                <Play className="w-6 h-6 text-gray-800 ml-1" />
                               </div>
                             </div>
                           )}
@@ -278,9 +278,9 @@ export function SuccessStories() {
                                   aria-label={isPlaying && activeVideo === testimonial.id ? "Pause" : "Play"}
                                 >
                                   {isPlaying && activeVideo === testimonial.id ? (
-                                    <Pause className="w-5 h-5" />
+                                    <Pause className="w-4 h-4" />
                                   ) : (
-                                    <Play className="w-5 h-5 ml-0.5" />
+                                    <Play className="w-4 h-4 ml-0.5" />
                                   )}
                                 </button>
                                 <span className="text-white text-xs">
@@ -292,13 +292,13 @@ export function SuccessStories() {
                                     className="text-white"
                                     aria-label={isMuted ? "Unmute" : "Mute"}
                                   >
-                                    {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                                    {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                                   </button>
                                   <button className="text-white" aria-label="Fullscreen">
-                                    <Maximize2 className="w-5 h-5" />
+                                    <Maximize2 className="w-4 h-4" />
                                   </button>
                                   <button className="text-white" aria-label="More options">
-                                    <MoreVertical className="w-5 h-5" />
+                                    <MoreVertical className="w-4 h-4" />
                                   </button>
                                 </div>
                               </div>

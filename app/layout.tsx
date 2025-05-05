@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Emery English - Learn with Human Support",
   description:
     "Structured courses, real-world practice, and human guidance – for learners who've tried apps, but want real progress.",
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" }],
+  },
     generator: 'v0.dev'
 }
 
