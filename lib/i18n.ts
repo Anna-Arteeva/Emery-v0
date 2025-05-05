@@ -99,7 +99,7 @@ export const translations = {
           bio: "Specializes in helping students master the nuances of English pronunciation with personalized exercises.",
         },
         {
-          name: "Emma",
+          name: "Nick",
           title: "THE ACCENT COACH",
           location: "Dublin",
           accent: "Irish",
@@ -467,7 +467,7 @@ export const translations = {
           bio: "Spezialisiert sich darauf, Schülern zu helfen, die Nuancen der englischen Aussprache mit personalisierten Übungen zu meistern.",
         },
         {
-          name: "Emma",
+          name: "Nick",
           title: "DIE AKZENT-COACH",
           location: "Dublin",
           accent: "Irish",
@@ -834,7 +834,7 @@ export const translations = {
           bio: "Специализируется на помощи студентам в освоении нюансов английского произношения с персонализированными упражнениями.",
         },
         {
-          name: "Эмма",
+          name: "Ник",
           title: "КОУЧ ПО АКЦЕНТУ",
           location: "Дублин",
           accent: "Ирландский",
@@ -1207,7 +1207,7 @@ export const translations = {
           bio: "Se spécialise dans l'aide aux étudiants pour maîtriser les nuances de la prononciation anglaise avec des exercices personnalisés.",
         },
         {
-          name: "Emma",
+          name: "Nick",
           title: "LA COACH D'ACCENT",
           location: "Dublin",
           accent: "Irish",
@@ -1581,7 +1581,7 @@ export const translations = {
           bio: "Спеціалізується на допомозі студентам в освоєнні нюансів англійської вимови з персоналізованими вправами.",
         },
         {
-          name: "Емма",
+          name: "Ник",
           title: "КОУЧ З АКЦЕНТУ",
           location: "Дублін",
           accent: "Ірландський",
