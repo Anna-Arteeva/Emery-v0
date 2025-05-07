@@ -2,7 +2,6 @@
 
 import { useLanguage } from "./language-provider"
 import { translations } from "@/lib/i18n"
-import { MapPin } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 import { FlagIcon } from "./flag-icon"
 
@@ -14,80 +13,88 @@ const getMentorData = (t: any) => {
     return [
       {
         id: 1,
-        name: "Grace",
-        title: "Pronunciation Trainer",
-        location: "London",
+        name: "Issie",
+        nameLocalized: { ru: "Исси", uk: "Исси" },
+        title: "Confidence & Pronunciation Coach",
+        location: "UK",
         accent: "British",
         videoUrl: "https://www.youtube.com/embed/5NH3zCO9XvQ",
-        bio: "Specializes in helping students master the nuances of English pronunciation with personalized exercises.",
+        bio: "Specializes in helping students build confidence to speak and master the nuances of English pronunciation.",
       },
       {
         id: 2,
-        name: "Nick",
-        title: "Accent Coach",
-        location: "Dublin",
-        accent: "Irish",
+        name: "Dale",
+        nameLocalized: { ru: "Дэйл", uk: "Дэйл" },
+        title: "Cultural Expert",
+        location: "UK",
+        accent: "British",
         videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
-        bio: "Helps students develop natural-sounding speech patterns and rhythm in their English conversations.",
+        bio: "Helps students understand cultural contexts and nuances in English communication.",
       },
       {
         id: 3,
-        name: "Floris",
-        title: "Grammar Expert",
-        location: "New York",
-        accent: "American",
+        name: "Coleman",
+        nameLocalized: { ru: "Колман", uk: "Колман" },
+        title: "Fluency Specialist",
+        location: "Ireland",
+        accent: "Irish",
         videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
-        bio: "Makes complex grammar rules simple and intuitive through practical, everyday examples.",
+        bio: "Focuses on developing fluency and natural speech patterns in English conversations.",
       },
       {
         id: 4,
         name: "Erin",
-        title: "Conversation Specialist",
-        location: "Toronto",
+        nameLocalized: { ru: "Эрин", uk: "Эрин" },
+        title: "Grammar Expert",
+        location: "Canada",
         accent: "Canadian",
         videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
-        bio: "Focuses on building fluency and confidence through engaging, real-world conversation practice.",
+        bio: "Makes complex grammar rules simple and intuitive through practical, everyday examples.",
       },
     ]
   }
 
-  // If we have the proper translation structure, use it
+  // If we have the proper translation structure, use it with our new mentor data
   return [
     {
       id: 1,
-      name: t.mentors.profiles[0]?.name || "Grace",
-      title: t.mentors.profiles[0]?.title || "Pronunciation Trainer",
-      location: t.mentors.profiles[0]?.location || "London",
-      accent: t.mentors.profiles[0]?.accent || "British",
+      name: "Issie",
+      nameLocalized: { ru: "Исси", uk: "Исси" },
+      title: t.mentors.profiles[0]?.title || "Confidence & Pronunciation Coach",
+      location: "UK",
+      accent: "British",
       videoUrl: "https://www.youtube.com/embed/5NH3zCO9XvQ",
-      bio: t.mentors.profiles[0]?.bio || "Specializes in helping students master English pronunciation.",
+      bio: "Specializes in helping students build confidence to speak and master the nuances of English pronunciation.",
     },
     {
       id: 2,
-      name: t.mentors.profiles[1]?.name || "Nick",
-      title: t.mentors.profiles[1]?.title || "Accent Coach",
-      location: t.mentors.profiles[1]?.location || "Dublin",
-      accent: t.mentors.profiles[1]?.accent || "Irish",
+      name: "Dale",
+      nameLocalized: { ru: "Дэйл", uk: "Дэйл" },
+      title: t.mentors.profiles[1]?.title || "Cultural Expert",
+      location: "UK",
+      accent: "British",
       videoUrl: "https://www.youtube.com/embed/GUql7LluMVE",
-      bio: "Helps students develop natural-sounding speech patterns.",
+      bio: "Helps students understand cultural contexts and nuances in English communication.",
     },
     {
       id: 3,
-      name: t.mentors.profiles[2]?.name || "Floris",
-      title: t.mentors.profiles[2]?.title || "Grammar Expert",
-      location: t.mentors.profiles[2]?.location || "New York",
-      accent: t.mentors.profiles[2]?.accent || "American",
+      name: "Coleman",
+      nameLocalized: { ru: "Колман", uk: "Колман" },
+      title: t.mentors.profiles[2]?.title || "Fluency Specialist",
+      location: "Ireland",
+      accent: "Irish",
       videoUrl: "https://www.youtube.com/embed/oCbNU2vxISE",
-      bio: "Makes complex grammar rules simple and intuitive.",
+      bio: "Focuses on developing fluency and natural speech patterns in English conversations.",
     },
     {
       id: 4,
-      name: t.mentors.profiles[3]?.name || "Erin",
-      title: t.mentors.profiles[3]?.title || "Conversation Specialist",
-      location: t.mentors.profiles[3]?.location || "Toronto",
-      accent: t.mentors.profiles[3]?.accent || "Canadian",
+      name: "Erin",
+      nameLocalized: { ru: "Эрин", uk: "Эрин" },
+      title: t.mentors.profiles[3]?.title || "Grammar Expert",
+      location: "Canada",
+      accent: "Canadian",
       videoUrl: "https://www.youtube.com/embed/W8cE85ncREg",
-      bio: "Focuses on building fluency and confidence.",
+      bio: "Makes complex grammar rules simple and intuitive through practical, everyday examples.",
     },
   ]
 }
@@ -156,6 +163,14 @@ export function OurMentors() {
     setIframesLoaded((prev) => ({ ...prev, [mentorId]: true }))
   }
 
+  // Get localized mentor name based on current language
+  const getMentorName = (mentor: any) => {
+    if (language === "ru" || language === "uk") {
+      return mentor.nameLocalized?.[language] || mentor.name
+    }
+    return mentor.name
+  }
+
   return (
     <section className="py-20 bg-white" id="mentors">
       <div className="container-custom">
@@ -201,16 +216,12 @@ export function OurMentors() {
 
               {/* Mentor info - left aligned */}
               <div className="text-left w-full">
-                <h3 className="font-medium text-gray-900 text-xl mb-1">{mentor.name}</h3>
+                <h3 className="font-medium text-gray-900 text-xl mb-1">{getMentorName(mentor)}</h3>
                 <div className="flex items-center text-sm text-gray-500 mb-2">
                   <span className="flex items-center gap-1.5">
                     <FlagIcon country={mentor.accent} />
-                    {mentor.accent} {t.mentors.accentLabel}
+                    {mentor.location}, {mentor.accent} {t.mentors.accentLabel}
                   </span>
-                </div>
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <MapPin className="h-3.5 w-3.5 mr-1.5 text-gray-400" />
-                  <span>{mentor.location}</span>
                 </div>
                 <p className="text-sm text-gray-600">{mentor.bio}</p>
               </div>

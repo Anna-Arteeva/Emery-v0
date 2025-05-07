@@ -81,11 +81,18 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <a href="https://app.emeryenglish.com/" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="text-sm font-medium">
-                {t.nav.login}
-              </Button>
-            </a>
+            <div className="flex items-center gap-2">
+              <a href="https://app.emeryenglish.com/signup" target="_blank" rel="noopener noreferrer">
+                <Button variant="default" size="sm" className="text-sm font-medium bg-purple-600 hover:bg-purple-700">
+                  {t.nav.getStarted}
+                </Button>
+              </a>
+              <a href="https://app.emeryenglish.com/" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="text-sm font-medium">
+                  {t.nav.login}
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

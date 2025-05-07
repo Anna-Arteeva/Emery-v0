@@ -36,7 +36,9 @@ export function CallToAction() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">{t.callToAction.headline}</h2>
 
           <div className="flex flex-col items-center justify-center">
-            <SublimationButton>{t.callToAction.cta}</SublimationButton>
+            <a href="https://app.emeryenglish.com/signup" target="_blank" rel="noopener noreferrer">
+              <SublimationButton>{t.callToAction.cta}</SublimationButton>
+            </a>
             <p className="mt-4 text-sm text-gray-500">{t.hero.caption}</p>
           </div>
         </div>

@@ -84,7 +84,9 @@ export function Hero() {
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{t.hero.intro}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <SublimationButton>{t.hero.cta}</SublimationButton>
+            <a href="https://app.emeryenglish.com/signup" target="_blank" rel="noopener noreferrer">
+              <SublimationButton>{t.hero.cta}</SublimationButton>
+            </a>
           </div>
           <p className="mt-4 text-sm text-gray-500">{t.hero.caption}</p>
         </div>

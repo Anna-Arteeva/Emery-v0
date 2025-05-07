@@ -36,7 +36,10 @@ export function FaqSection() {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">{t.faq.moreQuestions}</p>
-          <a href="#contact" className="text-purple-600 font-medium hover:text-purple-700 transition-colors">
+          <a
+            href="mailto:support@emeryenglish.com"
+            className="text-purple-600 font-medium hover:text-purple-700 transition-colors"
+          >
             {t.faq.contactUs}
           </a>
         </div>

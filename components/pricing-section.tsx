@@ -123,9 +123,16 @@ export function PricingSection() {
                   <span className="text-5xl font-extrabold text-gray-900">45€</span>
                 </div>
 
-                <Button variant="outline" className="w-full py-6">
-                  {t.pricing?.choose || fallbackTexts.choose}
-                </Button>
+                <a
+                  href="https://app.emeryenglish.com/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button variant="outline" className="w-full py-6">
+                    {t.pricing?.choose || fallbackTexts.choose}
+                  </Button>
+                </a>
 
                 <div className="text-center mt-4 text-sm text-gray-500">{basicDescription}</div>
               </div>
@@ -155,15 +162,22 @@ export function PricingSection() {
                   <span className="text-xl text-gray-500 line-through ml-2">199€</span>
                 </div>
 
-                <SublimationButton className="w-full">
-                  {language === "en"
-                    ? "GET LIFETIME ACCESS"
-                    : language === "de"
-                      ? "LEBENSLANGEN ZUGANG ERHALTEN"
-                      : language === "ru"
-                        ? "ПОЛУЧИТЬ ПОЖИЗНЕННЫЙ ДОСТУП"
-                        : "OBTENIR UN ACCÈS À VIE"}
-                </SublimationButton>
+                <a
+                  href="https://app.emeryenglish.com/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <SublimationButton className="w-full">
+                    {language === "en"
+                      ? "GET LIFETIME ACCESS"
+                      : language === "de"
+                        ? "LEBENSLANGEN ZUGANG ERHALTEN"
+                        : language === "ru"
+                          ? "ПОЛУЧИТЬ ПОЖИЗНЕННЫЙ ДОСТУП"
+                          : "OBTENIR UN ACCÈS À VIE"}
+                  </SublimationButton>
+                </a>
 
                 <div className="text-center mt-4 text-sm text-gray-500">
                   {language === "en"
@@ -188,9 +202,16 @@ export function PricingSection() {
                   <span className="text-xl text-gray-500 line-through ml-2">180€</span>
                 </div>
 
-                <Button variant="outline" className="w-full py-6">
-                  {t.pricing?.choose || fallbackTexts.choose}
-                </Button>
+                <a
+                  href="https://app.emeryenglish.com/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button variant="outline" className="w-full py-6">
+                    {t.pricing?.choose || fallbackTexts.choose}
+                  </Button>
+                </a>
 
                 <div className="text-center mt-4 text-sm text-gray-500">{premiumDescription}</div>
               </div>

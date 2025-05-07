@@ -8,107 +8,266 @@ export function PrivacyPolicyContent() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Privacy policy</h1>
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-600 mb-8">Last Updated: April 30, 2025</p>
-
-          <h2 className="text-2xl font-bold mt-8 mb-4">1. Introduction</h2>
-          <p>
-            Welcome to Emery English ("we," "our," or "us"). We respect your privacy and are committed to protecting
-            your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your
-            information when you use our website, mobile application, and services (collectively, the "Service").
+          <p className="text-gray-600 mb-8">
+            We value your privacy and your right to protect it. We also value transparency, which is why we fully
+            disclose all of our interactions with your data. Please, read the following:
           </p>
 
-          <h2 className="text-2xl font-bold mt-8 mb-4">2. Information We Collect</h2>
-          <h3 className="text-xl font-semibold mt-6 mb-3">2.1 Personal Information</h3>
-          <p>We may collect personal information that you provide directly to us, including but not limited to:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Name, email address, and contact details</li>
-            <li>Account credentials (username and password)</li>
-            <li>Profile information (such as profile picture, language preferences)</li>
-            <li>Payment information (processed through secure third-party payment processors)</li>
-            <li>Communication preferences</li>
-            <li>Learning progress, assessment results, and performance data</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-3">2.2 Automatically Collected Information</h3>
-          <p>When you access or use our Service, we may automatically collect certain information, including:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Device information (such as device type, operating system, and browser type)</li>
-            <li>Log data (such as IP address, access times, and pages viewed)</li>
-            <li>Usage information (such as features used and learning patterns)</li>
-            <li>Location information (with your consent)</li>
-            <li>Cookies and similar tracking technologies</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mt-8 mb-4">3. How We Use Your Information</h2>
-          <p>We use the information we collect for various purposes, including:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Providing, maintaining, and improving our Service</li>
-            <li>Processing transactions and managing your account</li>
-            <li>Personalizing your learning experience</li>
-            <li>Connecting you with mentors and other learners</li>
-            <li>Communicating with you about updates, offers, and support</li>
-            <li>Analyzing usage patterns to enhance our Service</li>
-            <li>Ensuring the security and integrity of our Service</li>
-            <li>Complying with legal obligations</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mt-8 mb-4">4. Sharing Your Information</h2>
-          <p>We may share your information with:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li>Service providers who perform services on our behalf</li>
-            <li>Language mentors and tutors as necessary for providing our Service</li>
-            <li>Other users, with your consent (such as in community features)</li>
-            <li>Business partners for joint offerings you choose to participate in</li>
-            <li>Legal authorities when required by law or to protect our rights</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mt-8 mb-4">5. Data Security</h2>
-          <p>
-            We implement appropriate technical and organizational measures to protect your personal information.
-            However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot
-            guarantee absolute security.
+          <h2 className="text-2xl font-bold mt-8 mb-4">Introduction</h2>
+          <p className="mb-4">
+            EMERY EN LIGHTENMENT CY LTD ("Company", "our", "we" or "us") provides its customers and potential customers
+            ("you", "User", "your") with access to its website located at https://arc.emeryenglish.com/ (the "Website").
+            Your privacy is important to us, and so is being transparent about how we collect, use, and share
+            information about you. This Privacy Policy (the "Privacy Policy") is intended to help you understand our
+            practices regarding the information we collect from you when you use and interact with the Website and when
+            you subscribe to our products and services, including the types of personal information collected, the
+            purpose and manners in which we may use such information, how we use the information we collect and the
+            choices and rights available to you.
+          </p>
+          <p className="mb-4">
+            By accessing the website, you agree to the terms and conditions set forth in this privacy policy, including
+            the collection and processing of your personal information (as defined below) as further set forth under
+            this policy. If you do not agree with our policies and practices, your choice is not to use our Website. By
+            accessing or using this Website, you agree to this Privacy Policy.
           </p>
 
-          <h2 className="text-2xl font-bold mt-8 mb-4">6. Your Rights and Choices</h2>
-          <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+          <h2 className="text-2xl font-bold mt-8 mb-4">Changes to this policy</h2>
+          <p className="mb-4">
+            We may update our Privacy Policy to reflect changes to our information practices, new services, or relevant
+            laws. The "Last updated" version of this Policy indicates when this Policy was last revised. Any changes are
+            effective when we post the revised Policy on the Services.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">Information We Collect</h2>
+          <p className="mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: through the registration
+            process
+          </p>
+          <p className="mb-4">Categories of information we collect about you include:</p>
           <ul className="list-disc pl-6 mb-4">
-            <li>Accessing, correcting, or deleting your personal information</li>
-            <li>Withdrawing consent for processing your data</li>
-            <li>Restricting or objecting to certain processing activities</li>
-            <li>Requesting portability of your personal information</li>
-            <li>Opting out of marketing communications</li>
+            <li>
+              Personal information includes name and surname, email, date of birth, username, address, country, time
+              zone and User password (encrypted);
+            </li>
+            <li>Optional information includes profile image;</li>
+            <li>
+              Technical information includes cookie and session values, device details (operation systems, screen size
+              and other parameters) and public IP address;
+            </li>
+            <li>
+              Activity information includes:
+              <ul className="list-disc pl-6 mb-2">
+                <li>The type of browser and operating system;</li>
+                <li>The time and date of the visit;</li>
+                <li>
+                  The pages of our Website that you visit, time spent on those pages, information that you search for on
+                  our Website;
+                </li>
+                <li>
+                  The geographical location from which you accessed our Website, and the actions you take on our
+                  Website;
+                </li>
+                <li>The website address, if any, that referred you to our Website;</li>
+                <li>
+                  To provide you with a better, more interactive experience on our Website, we may use in-house and
+                  third-party cookies;
+                </li>
+                <li>
+                  For communication purposes, including but not limited to, responding to comments, reviews and
+                  questions;
+                </li>
+                <li>For the purpose of enabling, investigating and preventing potential security issues and abuse;</li>
+                <li>To provide you with information about our services and promotions (upon your consent) and/or;</li>
+                <li>To comply with legal obligations;</li>
+                <li>To enforce our Terms of Use and other applicable policies;</li>
+                <li>To protect our rights, property, and safety;</li>
+                <li>To investigate, prevent, or take action regarding illegal activities.</li>
+              </ul>
+            </li>
           </ul>
-          <p>To exercise these rights, please contact us using the information provided in the "Contact Us" section.</p>
 
-          <h2 className="text-2xl font-bold mt-8 mb-4">7. Children's Privacy</h2>
-          <p>
-            Our Service is not intended for children under the age of 16. We do not knowingly collect personal
-            information from children under 16. If you are a parent or guardian and believe your child has provided us
-            with personal information, please contact us.
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: through the Activity Data
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Learning activity (including progress, answers, quiz attempts, test results);</li>
+            <li>Learning activity (lesson completion, answers, quiz attempts, test results);</li>
+            <li>Feedback and reviews;</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+            <li>Recordings related to lessons (for later inspection and performance of our product);</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: through payment transaction.
+            If you choose to pay
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Payment information (card details about your card);</li>
+            <li>Bank account information (when you choose to connect your bank account);</li>
+            <li>Billing address and contact information;</li>
+            <li>Transaction history (date, amount, subscription plan, payment method, payment status);</li>
+          </ul>
+
+          <p className="mb-4">We use this information for certain activities, including:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>To process payments and subscriptions;</li>
+            <li>To manage billing and accounting;</li>
+            <li>To detect and prevent fraudulent transactions;</li>
+            <li>To comply with financial regulations or obligations as service-side commercial license use.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: through your browser
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Cookies and similar technologies;</li>
+            <li>Browser type and version;</li>
+            <li>IP address and approximate location;</li>
+            <li>Operating system or configuration on website you connected upon.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: through our website and any
+            mobile applications
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Information you provide when registering for an account;</li>
+            <li>Content you create or upload to our services;</li>
+            <li>
+              Information about how you use our services (such as features you use and through our site through the
+              Product);
+            </li>
+            <li>When you contact our services (such as when information about your account);</li>
+            <li>Information you provide when you interact with our services.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: through our website and any
+            browser extensions and through social media sites such as Facebook
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>
+              Information you provide when you sign in based on accounts, such as connection details, profile
+              information, or based on your social media accounts (e.g. Facebook login);
+            </li>
+            <li>
+              Information you provide when you sign in based on accounts, such as connection details, profile
+              information, or based on your social media accounts (e.g. Facebook login);
+            </li>
+            <li>Information you provide when registering for a member account;</li>
+            <li>
+              When you connect your social media account to your Emery English profile, we collect information from your
+              profile, including your profile photograph;
+            </li>
+            <li>When you interact with Emery on social media (e.g. by commenting on a post);</li>
+            <li>When you interact with Emery on social media (e.g. by commenting on a post);</li>
+            <li>Cookies and tracking pixel-related activity;</li>
+            <li>Information about your device (such as your IP address);</li>
+            <li>
+              Information about your browsing activity (such as which pages you visit and when, and which links you
+              click on and where);
+            </li>
+            <li>Information about your location;</li>
+            <li>Accessibility settings;</li>
+            <li>Information you choose to manage options with our video and photo services;</li>
+            <li>Information you choose to manage options with our video and photo services;</li>
+            <li>Information you choose to manage options with our video and photo services;</li>
+            <li>Information you choose to manage options with our video and photo services;</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: when you choose to use the
+            tool of "Language Ping" ("Ping") and/or make recordings for the use by the tool
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+            <li>Voice recordings (when you record yourself reading a text, having a conversation, and so on);</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how we collect, use and share your personal data: When you choose to talk
+            directly with mentors (video/audio) ("Video Call Service")
+          </h2>
+          <p className="mb-4">Categories of information we collect about you include:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+            <li>Information you share during mentorship sessions;</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">
+            This Privacy Policy explains how and why we may disclose your personal information
+          </h2>
+          <p className="mb-4">We may disclose your personal information to others, including:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+            <li>Service providers who perform services on our behalf;</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">Managing your rights</h2>
+          <p className="mb-4">Right to access your personal data:</p>
+          <ul className="list-disc pl-6 mb-4">
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+            <li>You have the right to request access to your personal information;</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">Additional Information</h2>
+          <p className="mb-4">
+            We may update this privacy policy from time to time. The updated version will be indicated by an updated
+            "Last updated" date and the updated version will be effective as soon as it is accessible.
           </p>
 
-          <h2 className="text-2xl font-bold mt-8 mb-4">8. International Data Transfers</h2>
-          <p>
-            Your information may be transferred to and processed in countries other than your country of residence.
-            These countries may have different data protection laws. We take appropriate safeguards to ensure your
-            information remains protected.
-          </p>
+          <h2 className="text-2xl font-bold mt-8 mb-4">Date of last document update:</h2>
+          <p className="mb-4">August 17th, 2023</p>
 
-          <h2 className="text-2xl font-bold mt-8 mb-4">9. Changes to This Privacy Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
-            Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy
-            Policy periodically for any changes.
-          </p>
-
-          <h2 className="text-2xl font-bold mt-8 mb-4">10. Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+          <h2 className="text-2xl font-bold mt-8 mb-4">Contact Us</h2>
           <p className="mb-8">
-            <strong>Email:</strong> privacy@emeryenglish.com
-            <br />
-            <strong>Address:</strong> Emery English, 123 Language Lane, Learning City, 10001
+            If you have any questions about this Privacy Policy or our data practices, please contact our support team
+            at:{" "}
+            <a href="mailto:support@emeryenglish.com" className="text-purple-600 hover:underline">
+              support@emeryenglish.com
+            </a>
           </p>
         </div>
       </div>
